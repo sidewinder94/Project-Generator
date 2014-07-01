@@ -51,6 +51,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GeneratorContracts\GeneratorServiceContracts.csproj">
+      <Project>{8391BE39-6F66-4CF0-ABCC-C25D7FF7385D}</Project>
+      <Name>GeneratorServiceContracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeneratorService\GeneratorService.csproj">
       <Project>{7F3FB38F-E513-4B22-A6A8-A1E0AE42252D}</Project>
       <Name>GeneratorService</Name>

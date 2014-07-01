@@ -7,23 +7,13 @@ using System.ServiceModel;
 
 namespace GeneratorServiceContracts
 {
-    public interface ICallBackClient
+    [ServiceContract]
+    public interface IWorkService
     {
-        [OperationContract(IsOneWay = true)]
-        void NotifyClient(Message msg);
-    }
-
-
-    [ServiceContract(CallbackContract = typeof(ICallBackClient))]
-    interface IWorkService
-    {
-        [OperationContract(IsOneWay = true)]
+        [OperationContract]
         void CompletedOperation(Message msg);
         [OperationContract]
-        Message Service(Message msg);
-        [OperationContract(IsOneWay = true)]
-        void Subscribe(String userToken);
-        [OperationContract(IsOneWay = true)]
-        void Unsubscribe(String userToken);
+        Message ServiceOperation(Message msg);
+
     }
 }

@@ -27,7 +27,7 @@ namespace GeneratorServiceContracts
     }
 
     [DataContract]
-    class Message
+    public class Message
     {
         [DataMember]
         public String ApplicationToken { get; set; }
