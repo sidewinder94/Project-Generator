@@ -30,9 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -42,7 +50,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallBackService.cs" />
+    <Compile Include="Data.cs">
+      <DependentUpon>DataGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataGen.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGen.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataGen.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGen.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DataGen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataGen.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs">
+      <DependentUpon>DataGen.tt</DependentUpon>
+    </Compile>
     <Compile Include="WorkService.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -50,10 +79,43 @@
       <Project>{8391BE39-6F66-4CF0-ABCC-C25D7FF7385D}</Project>
       <Name>GeneratorServiceContracts</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\GeneratorServiceCallbackContract\GeneratorServiceCallbackContract.csproj">
+      <Project>{A300C2A4-9115-425C-AD09-4CB63417007D}</Project>
+      <Name>GeneratorServiceCallbackContract</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GeneratorServiceDataContract\GeneratorServiceDataContract.csproj">
       <Project>{9A385AB5-9DB1-4363-BD42-A4AB74E91197}</Project>
       <Name>GeneratorServiceDataContract</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="DataGen.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DataGen.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="DataGen.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataGen.Context.cs</LastGenOutput>
+      <DependentUpon>DataGen.edmx</DependentUpon>
+    </None>
+    <None Include="DataGen.edmx.diagram">
+      <DependentUpon>DataGen.edmx</DependentUpon>
+    </None>
+    <None Include="DataGen.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DataGen.cs</LastGenOutput>
+      <DependentUpon>DataGen.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataGen.edmx.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

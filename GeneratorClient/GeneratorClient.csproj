@@ -116,6 +116,10 @@
       <Project>{A300C2A4-9115-425C-AD09-4CB63417007D}</Project>
       <Name>GeneratorServiceCallbackContract</Name>
     </ProjectReference>
+    <ProjectReference Include="GeneratorServiceDataContract\GeneratorServiceDataContract.csproj">
+      <Project>{9A385AB5-9DB1-4363-BD42-A4AB74E91197}</Project>
+      <Name>GeneratorServiceDataContract</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

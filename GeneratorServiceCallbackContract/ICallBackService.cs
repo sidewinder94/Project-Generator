@@ -5,12 +5,12 @@ using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeneratorServiceContracts
+namespace GeneratorServiceCallBackContracts
 {
     public interface ICallBackClient
     {
         [OperationContract(IsOneWay = true)]
-        void NotifyClient(Message msg);
+        void NotifyClient(CallBackMessage msg);
     }
 
 
@@ -18,7 +18,7 @@ namespace GeneratorServiceContracts
     public interface ICallBackService
     {
         [OperationContract(IsOneWay = true)]
-        void NotifyClient(Message msg);
+        void NotifyClient(CallBackMessage msg);
         [OperationContract(IsOneWay = true)]
         void Subscribe(String userToken);
         [OperationContract(IsOneWay = true)]

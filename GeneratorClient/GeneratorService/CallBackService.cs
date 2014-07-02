@@ -1,4 +1,5 @@
-﻿using GeneratorServiceContracts;
+﻿using GeneratorServiceCallBackContracts;
+using GeneratorServiceContracts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -45,7 +46,7 @@ namespace GeneratorService
             }
         }
 
-        public void NotifyClient(Message msg)
+        public void NotifyClient(CallBackMessage msg)
         {
             Guid userGuid = Guid.Parse(msg.UserToken);
             ICallBackClient channel = CallbackChannels[userGuid] as ICallBackClient;

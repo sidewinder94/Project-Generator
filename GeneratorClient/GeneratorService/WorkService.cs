@@ -1,4 +1,5 @@
-﻿using GeneratorServiceContracts;
+﻿using GeneratorServiceCallBackContracts;
+using GeneratorServiceContracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,9 @@ namespace GeneratorService
 {
     class CallBack : ICallBackClient
     {
-
-        public void NotifyClient(Message msg)
+        public void NotifyClient(CallBackMessage msg)
         {
-            Console.WriteLine("Not a Client !!!!");
+            throw new NotImplementedException();
         }
     }
 
@@ -46,7 +46,7 @@ namespace GeneratorService
                 case Operations.Decode:
                     return Decode(msg);
                 case Operations.Finish:
-                    service.NotifyClient(msg);
+                    service.NotifyClient((CallBackMessage)msg);
                     break;
                 default:
                     throw new NotImplementedException();

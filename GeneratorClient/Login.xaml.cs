@@ -44,6 +44,7 @@ namespace GeneratorClient
                                       status: Status.Sent);
             msg = client.ServiceOperation(msg);
             ((MainWindow)this.Parent).setUserToken(msg.UserToken);
+            ((MainWindow)this.Parent).Content = new Main((MainWindow)this.Parent);
         }
     }
 }
