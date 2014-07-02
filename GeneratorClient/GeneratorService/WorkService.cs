@@ -22,7 +22,7 @@ namespace GeneratorService
         #region connection to callbackService
         private static readonly CallBack callback = new CallBack();
         private readonly DuplexChannelFactory<ICallBackService> channel =
-            new DuplexChannelFactory<ICallBackService>(callback, "default");
+            new DuplexChannelFactory<ICallBackService>(callback, "callBackEndpoint");
         private ICallBackService service;
         #endregion
 
@@ -42,11 +42,9 @@ namespace GeneratorService
             switch (msg.Operation)
             {
                 case Operations.Authenticate:
-                    Authenticate(msg);
-                    break;
+                    return Authenticate(msg);
                 case Operations.Decode:
-                    Decode(msg);
-                    break;
+                    return Decode(msg);
                 case Operations.Finish:
                     service.NotifyClient(msg);
                     break;
@@ -54,8 +52,7 @@ namespace GeneratorService
                     throw new NotImplementedException();
                 //break;
             }
-
-            throw new NotImplementedException();
+            return null;
         }
 
         private Message Decode(Message msg)
@@ -87,6 +84,7 @@ namespace GeneratorService
 
         private Message Authenticate(Message msg)
         {
+            Console.WriteLine("{0} asked for Authentication", msg.ApplicationToken);
             Guid generated = Guid.NewGuid();
             while (authenticatedClients.Contains(generated) || generated == Guid.Empty)
             {
@@ -94,8 +92,20 @@ namespace GeneratorService
             }
             msg.UserToken = generated.ToString();
             msg.Status = Status.Suceeded;
+            Console.WriteLine("{0} got {1} as userToken", msg.ApplicationToken, msg.UserToken);
             return msg;
         }
 
+
+
+        public IAsyncResult BeginServiceOperation(Message msg, AsyncCallback callback, object asyncState)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Message EndServiceOperation(IAsyncResult result)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

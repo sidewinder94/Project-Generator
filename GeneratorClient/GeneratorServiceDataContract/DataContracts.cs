@@ -44,5 +44,23 @@ namespace GeneratorServiceContracts
         public Status Status { get; set; }
         [DataMember]
         public String UserToken { get; set; }
+
+        public Message() { }
+        public Message(String applicationToken = null, object[] data = null, String info = null,
+                       Operations? operation = null, Status? status = null, String userToken = null)
+        {
+            ApplicationToken = applicationToken;
+            Data = data;
+            Info = info;
+            UserToken = userToken;
+            if (operation != null)
+            {
+                Operation = (Operations)operation;
+            }
+            if (status != null)
+            {
+                Status = (Status)status;
+            }
+        }
     }
 }

@@ -13,145 +13,308 @@ namespace GeneratorServiceContracts
     using System.Runtime.Serialization;
 
 
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IWorkServiceAsync")]
-    public interface IWorkServiceAsync
-    {
-
-        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IWorkServiceAsync/ServiceOperation", ReplyAction = "http://tempuri.org/IWorkServiceAsync/ServiceOperationResponse")]
-        GeneratorServiceContracts.Message ServiceOperation(GeneratorServiceContracts.Message msg);
-
-        [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IWorkServiceAsync/ServiceOperation", ReplyAction = "http://tempuri.org/IWorkServiceAsync/ServiceOperationResponse")]
-        System.IAsyncResult BeginServiceOperation(GeneratorServiceContracts.Message msg, System.AsyncCallback callback, object asyncState);
-
-        GeneratorServiceContracts.Message EndServiceOperation(System.IAsyncResult result);
-    }
-
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IWorkServiceChannel : IWorkServiceAsync, System.ServiceModel.IClientChannel
-    {
-    }
-
     [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class ServiceOperationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "Message", Namespace = "http://schemas.datacontract.org/2004/07/GeneratorServiceContracts")]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeneratorServiceContracts.Operations))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(GeneratorServiceContracts.Status))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    public partial class Message : object, System.Runtime.Serialization.IExtensibleDataObject
     {
 
-        private object[] results;
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
 
-        public ServiceOperationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
-            base(exception, cancelled, userState)
-        {
-            this.results = results;
-        }
+        private string ApplicationTokenField;
 
-        public GeneratorServiceContracts.Message Result
+        private object[] DataField;
+
+        private string InfoField;
+
+        private GeneratorServiceContracts.Operations OperationField;
+
+        private GeneratorServiceContracts.Status StatusField;
+
+        private string UserTokenField;
+
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData
         {
             get
             {
-                base.RaiseExceptionIfNecessary();
-                return ((GeneratorServiceContracts.Message)(this.results[0]));
+                return this.extensionDataField;
+            }
+            set
+            {
+                this.extensionDataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ApplicationToken
+        {
+            get
+            {
+                return this.ApplicationTokenField;
+            }
+            set
+            {
+                this.ApplicationTokenField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object[] Data
+        {
+            get
+            {
+                return this.DataField;
+            }
+            set
+            {
+                this.DataField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Info
+        {
+            get
+            {
+                return this.InfoField;
+            }
+            set
+            {
+                this.InfoField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GeneratorServiceContracts.Operations Operation
+        {
+            get
+            {
+                return this.OperationField;
+            }
+            set
+            {
+                this.OperationField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public GeneratorServiceContracts.Status Status
+        {
+            get
+            {
+                return this.StatusField;
+            }
+            set
+            {
+                this.StatusField = value;
+            }
+        }
+
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string UserToken
+        {
+            get
+            {
+                return this.UserTokenField;
+            }
+            set
+            {
+                this.UserTokenField = value;
+            }
+        }
+
+        public Message() { }
+        public Message(string applicationToken = null, object[] data = null, string info = null,
+                       Operations? operation = null, Status? status = null, string userToken = null)
+        {
+            ApplicationToken = applicationToken;
+            Data = data;
+            Info = info;
+            UserToken = userToken;
+            if (operation != null)
+            {
+                Operation = (Operations)operation;
+            }
+            if (status != null)
+            {
+                Status = (Status)status;
             }
         }
     }
 
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class WorkServiceClient : System.ServiceModel.ClientBase<IWorkServiceAsync>, IWorkServiceAsync
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "Operations", Namespace = "http://schemas.datacontract.org/2004/07/GeneratorServiceContracts")]
+    public enum Operations : int
     {
 
-        private BeginOperationDelegate onBeginServiceOperationDelegate;
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Authenticate = 0,
 
-        private EndOperationDelegate onEndServiceOperationDelegate;
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Decode = 1,
 
-        private System.Threading.SendOrPostCallback onServiceOperationCompletedDelegate;
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Finish = 2,
+    }
 
-        public WorkServiceClient()
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name = "Status", Namespace = "http://schemas.datacontract.org/2004/07/GeneratorServiceContracts")]
+    public enum Status : int
+    {
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Sent = 0,
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Suceeded = 1,
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        Failed = 2,
+    }
+}
+
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+[System.ServiceModel.ServiceContractAttribute(ConfigurationName = "IWorkService")]
+public interface IWorkService
+{
+
+    [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IWorkService/ServiceOperation", ReplyAction = "http://tempuri.org/IWorkService/ServiceOperationResponse")]
+    GeneratorServiceContracts.Message ServiceOperation(GeneratorServiceContracts.Message msg);
+
+    [System.ServiceModel.OperationContractAttribute(AsyncPattern = true, Action = "http://tempuri.org/IWorkService/ServiceOperation", ReplyAction = "http://tempuri.org/IWorkService/ServiceOperationResponse")]
+    System.IAsyncResult BeginServiceOperation(GeneratorServiceContracts.Message msg, System.AsyncCallback callback, object asyncState);
+
+    GeneratorServiceContracts.Message EndServiceOperation(System.IAsyncResult result);
+}
+
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public interface IWorkServiceChannel : IWorkService, System.ServiceModel.IClientChannel
+{
+}
+
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class ServiceOperationCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs
+{
+
+    private object[] results;
+
+    public ServiceOperationCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) :
+        base(exception, cancelled, userState)
+    {
+        this.results = results;
+    }
+
+    public GeneratorServiceContracts.Message Result
+    {
+        get
         {
+            base.RaiseExceptionIfNecessary();
+            return ((GeneratorServiceContracts.Message)(this.results[0]));
         }
+    }
+}
 
-        public WorkServiceClient(string endpointConfigurationName) :
-            base(endpointConfigurationName)
-        {
-        }
+[System.Diagnostics.DebuggerStepThroughAttribute()]
+[System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+public partial class WorkServiceClient : System.ServiceModel.ClientBase<IWorkService>, IWorkService
+{
 
-        public WorkServiceClient(string endpointConfigurationName, string remoteAddress) :
-            base(endpointConfigurationName, remoteAddress)
-        {
-        }
+    private BeginOperationDelegate onBeginServiceOperationDelegate;
 
-        public WorkServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
-            base(endpointConfigurationName, remoteAddress)
-        {
-        }
+    private EndOperationDelegate onEndServiceOperationDelegate;
 
-        public WorkServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
-            base(binding, remoteAddress)
-        {
-        }
+    private System.Threading.SendOrPostCallback onServiceOperationCompletedDelegate;
 
-        public event System.EventHandler<ServiceOperationCompletedEventArgs> ServiceOperationCompleted;
+    public WorkServiceClient()
+    {
+    }
 
-        public GeneratorServiceContracts.Message ServiceOperation(GeneratorServiceContracts.Message msg)
-        {
-            return base.Channel.ServiceOperation(msg);
-        }
+    public WorkServiceClient(string endpointConfigurationName) :
+        base(endpointConfigurationName)
+    {
+    }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public System.IAsyncResult BeginServiceOperation(GeneratorServiceContracts.Message msg, System.AsyncCallback callback, object asyncState)
-        {
-            return base.Channel.BeginServiceOperation(msg, callback, asyncState);
-        }
+    public WorkServiceClient(string endpointConfigurationName, string remoteAddress) :
+        base(endpointConfigurationName, remoteAddress)
+    {
+    }
 
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        public GeneratorServiceContracts.Message EndServiceOperation(System.IAsyncResult result)
-        {
-            return base.Channel.EndServiceOperation(result);
-        }
+    public WorkServiceClient(string endpointConfigurationName, System.ServiceModel.EndpointAddress remoteAddress) :
+        base(endpointConfigurationName, remoteAddress)
+    {
+    }
 
-        private System.IAsyncResult OnBeginServiceOperation(object[] inValues, System.AsyncCallback callback, object asyncState)
-        {
-            GeneratorServiceContracts.Message msg = ((GeneratorServiceContracts.Message)(inValues[0]));
-            return this.BeginServiceOperation(msg, callback, asyncState);
-        }
+    public WorkServiceClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
+        base(binding, remoteAddress)
+    {
+    }
 
-        private object[] OnEndServiceOperation(System.IAsyncResult result)
-        {
-            GeneratorServiceContracts.Message retVal = this.EndServiceOperation(result);
-            return new object[] {
+    public event System.EventHandler<ServiceOperationCompletedEventArgs> ServiceOperationCompleted;
+
+    public GeneratorServiceContracts.Message ServiceOperation(GeneratorServiceContracts.Message msg)
+    {
+        return base.Channel.ServiceOperation(msg);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public System.IAsyncResult BeginServiceOperation(GeneratorServiceContracts.Message msg, System.AsyncCallback callback, object asyncState)
+    {
+        return base.Channel.BeginServiceOperation(msg, callback, asyncState);
+    }
+
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    public GeneratorServiceContracts.Message EndServiceOperation(System.IAsyncResult result)
+    {
+        return base.Channel.EndServiceOperation(result);
+    }
+
+    private System.IAsyncResult OnBeginServiceOperation(object[] inValues, System.AsyncCallback callback, object asyncState)
+    {
+        GeneratorServiceContracts.Message msg = ((GeneratorServiceContracts.Message)(inValues[0]));
+        return this.BeginServiceOperation(msg, callback, asyncState);
+    }
+
+    private object[] OnEndServiceOperation(System.IAsyncResult result)
+    {
+        GeneratorServiceContracts.Message retVal = this.EndServiceOperation(result);
+        return new object[] {
                 retVal};
-        }
+    }
 
-        private void OnServiceOperationCompleted(object state)
+    private void OnServiceOperationCompleted(object state)
+    {
+        if ((this.ServiceOperationCompleted != null))
         {
-            if ((this.ServiceOperationCompleted != null))
-            {
-                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
-                this.ServiceOperationCompleted(this, new ServiceOperationCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
-            }
+            InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+            this.ServiceOperationCompleted(this, new ServiceOperationCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
         }
+    }
 
-        public void ServiceOperationAsync(GeneratorServiceContracts.Message msg)
+    public void ServiceOperationAsync(GeneratorServiceContracts.Message msg)
+    {
+        this.ServiceOperationAsync(msg, null);
+    }
+
+    public void ServiceOperationAsync(GeneratorServiceContracts.Message msg, object userState)
+    {
+        if ((this.onBeginServiceOperationDelegate == null))
         {
-            this.ServiceOperationAsync(msg, null);
+            this.onBeginServiceOperationDelegate = new BeginOperationDelegate(this.OnBeginServiceOperation);
         }
-
-        public void ServiceOperationAsync(GeneratorServiceContracts.Message msg, object userState)
+        if ((this.onEndServiceOperationDelegate == null))
         {
-            if ((this.onBeginServiceOperationDelegate == null))
-            {
-                this.onBeginServiceOperationDelegate = new BeginOperationDelegate(this.OnBeginServiceOperation);
-            }
-            if ((this.onEndServiceOperationDelegate == null))
-            {
-                this.onEndServiceOperationDelegate = new EndOperationDelegate(this.OnEndServiceOperation);
-            }
-            if ((this.onServiceOperationCompletedDelegate == null))
-            {
-                this.onServiceOperationCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnServiceOperationCompleted);
-            }
-            base.InvokeAsync(this.onBeginServiceOperationDelegate, new object[] {
+            this.onEndServiceOperationDelegate = new EndOperationDelegate(this.OnEndServiceOperation);
+        }
+        if ((this.onServiceOperationCompletedDelegate == null))
+        {
+            this.onServiceOperationCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnServiceOperationCompleted);
+        }
+        base.InvokeAsync(this.onBeginServiceOperationDelegate, new object[] {
                     msg}, this.onEndServiceOperationDelegate, this.onServiceOperationCompletedDelegate, userState);
-        }
     }
 }

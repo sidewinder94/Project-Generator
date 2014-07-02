@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -17,19 +16,13 @@ using System.Windows.Shapes;
 namespace GeneratorClient
 {
     /// <summary>
-    /// Logique d'interaction pour MainWindow.xaml
+    /// Logique d'interaction pour Main.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Main : UserControl
     {
-        private String userToken;
-        public MainWindow()
+        public Main()
         {
             InitializeComponent();
-            this.Content = new Login();
-        }
-        public void setUserToken(String token)
-        {
-            userToken = token;
         }
     }
 }
