@@ -13,7 +13,9 @@ namespace GeneratorServiceContracts
         [EnumMember]
         Authenticate = 0,
         [EnumMember]
-        Decode = 1
+        Decode = 1,
+        [EnumMember]
+        Finish = 2
     }
 
     public enum Status

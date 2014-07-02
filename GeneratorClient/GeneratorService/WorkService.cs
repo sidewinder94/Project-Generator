@@ -16,6 +16,16 @@ namespace GeneratorService
 
         public Message ServiceOperation(Message msg)
         {
+            switch (msg.Operation)
+            {
+                case Operations.Authenticate:
+                    break;
+                case Operations.Decode:
+                    break;
+                default:
+                    break;
+            }
+
             throw new NotImplementedException();
         }
     }
