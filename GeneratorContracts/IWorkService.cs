@@ -11,8 +11,6 @@ namespace GeneratorServiceContracts
     public interface IWorkService
     {
         [OperationContract]
-        void CompletedOperation(Message msg);
-        [OperationContract]
         Message ServiceOperation(Message msg);
 
     }

@@ -18,6 +18,7 @@ namespace GeneratorServiceContracts
         Finish = 2
     }
 
+    [DataContract]
     public enum Status
     {
         [EnumMember]
