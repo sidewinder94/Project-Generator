@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="3eea23f1d9a341f0ad078a8ed2c46781" Name="Diagram1" >
-        <EntityTypeShape EntityType="DataGen.Data" Width="1.5" PointX="3.125" PointY="1.125" />
-        <EntityTypeShape EntityType="DataGen.User" Width="1.5" PointX="4.875" PointY="1.125" />
+      <Diagram DiagramId="47caaf5f8f2c455a80ca9b358c53b6e8" Name="Diagram1">
+        <EntityTypeShape EntityType="tempdbModel.DataSet" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tempdbModel.UserSet" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

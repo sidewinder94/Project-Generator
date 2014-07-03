@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="GeneratorClient.ConvertedItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="45" d:DesignWidth="300">
+    <Grid>
+        <Label Content="{Binding Path=FileName}" HorizontalAlignment="Left" Height="25" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Button Content="PDF" Margin="0,10,10,0" VerticalAlignment="Top" Height="25" HorizontalAlignment="Right" Width="35" Click="PDFButton_Click"/>
+        <Button Content="Texte" Margin="0,10,50,0" VerticalAlignment="Top" Height="25" RenderTransformOrigin="1.278,0.506" HorizontalAlignment="Right" Width="45" Click="TextButton_Click"/>
+        <Label Content="{Binding Path=MailFound}" Margin="0,10,100,0" VerticalAlignment="Top" Height="24" HorizontalAlignment="Right" Width="38"/>
+
+    </Grid>
+</UserControl>

@@ -8,6 +8,9 @@
     <Grid>
         <Button Content="Ouvrir" Margin="0,10,10,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="75"/>
         <Label Content="" Margin="10,7,90,0" VerticalAlignment="Top"/>
+        <ScrollViewer HorizontalAlignment="Left" Height="252" Margin="10,38,0,0" VerticalAlignment="Top" Width="280" VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="convertedItems"/>
+        </ScrollViewer>
 
     </Grid>
 </UserControl>

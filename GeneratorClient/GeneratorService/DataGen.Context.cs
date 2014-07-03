@@ -13,10 +13,10 @@ namespace GeneratorService
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Model1Container : DbContext
+    public partial class DataGenConnexion : DbContext
     {
-        public Model1Container()
-            : base("name=Model1Container")
+        public DataGenConnexion()
+            : base("name=DataGenConnexion")
         {
         }
     
@@ -25,7 +25,7 @@ namespace GeneratorService
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Data> DataSet { get; set; }
-        public virtual DbSet<User> UserSet { get; set; }
+        public virtual DbSet<DataSet> DataSets { get; set; }
+        public virtual DbSet<UserSet> UserSets { get; set; }
     }
 }

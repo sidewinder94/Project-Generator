@@ -14,10 +14,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorService", "Generat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorServer", "GeneratorServer\GeneratorServer.csproj", "{4A1D1260-0778-416D-9D5E-41CBC30097AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorServiceCallbackContract", "..\GeneratorServiceCallbackContract\GeneratorServiceCallbackContract.csproj", "{A300C2A4-9115-425C-AD09-4CB63417007D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorServiceDataContract", "GeneratorServiceDataContract\GeneratorServiceDataContract.csproj", "{9A385AB5-9DB1-4363-BD42-A4AB74E91197}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -40,14 +36,6 @@ Global
 		{4A1D1260-0778-416D-9D5E-41CBC30097AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1D1260-0778-416D-9D5E-41CBC30097AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1D1260-0778-416D-9D5E-41CBC30097AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A300C2A4-9115-425C-AD09-4CB63417007D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A300C2A4-9115-425C-AD09-4CB63417007D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A300C2A4-9115-425C-AD09-4CB63417007D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A300C2A4-9115-425C-AD09-4CB63417007D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A385AB5-9DB1-4363-BD42-A4AB74E91197}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A385AB5-9DB1-4363-BD42-A4AB74E91197}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A385AB5-9DB1-4363-BD42-A4AB74E91197}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A385AB5-9DB1-4363-BD42-A4AB74E91197}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

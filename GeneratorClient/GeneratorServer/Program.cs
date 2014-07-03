@@ -13,9 +13,7 @@ namespace GeneratorServer
         static void Main(string[] args)
         {
             ServiceHost host = new ServiceHost(typeof(WorkService));
-            ServiceHost host2 = new ServiceHost(typeof(CallBackService));
             host.Open();
-            host2.Open();
             Console.WriteLine("server ready");
             Console.ReadLine();
         }

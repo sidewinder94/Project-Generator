@@ -10,7 +10,7 @@
         <Label Content="Mot de Passe : " HorizontalAlignment="Left" Margin="34,133,0,0" VerticalAlignment="Top"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="146,109,0,0" TextWrapping="Wrap" Text="{Binding Path=Username}" VerticalAlignment="Top" Width="120"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Height="23" Margin="146,137,0,0" VerticalAlignment="Top" Width="120"/>
-        <Button Content="Login" HorizontalAlignment="Left" Margin="110,164,0,0" VerticalAlignment="Top" Width="74" Click="LoginButton_Click"/>
+        <Button Content="Login" HorizontalAlignment="Left" Margin="110,164,0,0" VerticalAlignment="Top" Width="74" Click="LoginButton_Click" IsDefault="True"/>
 
     </Grid>
 </UserControl>

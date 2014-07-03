@@ -21,15 +21,12 @@ namespace GeneratorClient
     /// </summary>
     public partial class MainWindow : Window
     {
-        private String userToken;
+        public String userToken;
+        public String applicationToken;
         public MainWindow()
         {
             InitializeComponent();
             this.Content = new Login();
-        }
-        public void setUserToken(String token)
-        {
-            userToken = token;
         }
     }
 }

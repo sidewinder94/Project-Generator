@@ -125,7 +125,6 @@ namespace GeneratorServiceContracts
                 this.UserTokenField = value;
             }
         }
-
         public Message() { }
         public Message(string applicationToken = null, object[] data = null, string info = null,
                        Operations? operation = null, Status? status = null, string userToken = null)
@@ -158,6 +157,11 @@ namespace GeneratorServiceContracts
 
         [System.Runtime.Serialization.EnumMemberAttribute()]
         Finish = 2,
+
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        GetCompleted = 3,
+        [System.Runtime.Serialization.EnumMemberAttribute()]
+        GetDecrypted = 4,
     }
 
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]

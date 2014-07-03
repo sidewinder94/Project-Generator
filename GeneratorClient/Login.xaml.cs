@@ -43,8 +43,10 @@ namespace GeneratorClient
                                       operation: Operations.Authenticate,
                                       status: Status.Sent);
             msg = client.ServiceOperation(msg);
-            ((MainWindow)this.Parent).setUserToken(msg.UserToken);
+            ((MainWindow)this.Parent).userToken = msg.UserToken;
+            ((MainWindow)this.Parent).applicationToken = msg.ApplicationToken;
             ((MainWindow)this.Parent).Content = new Main((MainWindow)this.Parent);
+            client.Close();
         }
     }
 }

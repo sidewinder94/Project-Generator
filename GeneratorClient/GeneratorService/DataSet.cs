@@ -12,13 +12,13 @@ namespace GeneratorService
     using System;
     using System.Collections.Generic;
     
-    public partial class Data
+    public partial class DataSet
     {
         public int Id { get; set; }
+        public string FileID { get; set; }
         public string FileName { get; set; }
         public string DecodedText { get; set; }
         public byte[] TrustLevelPdf { get; set; }
         public string Mail { get; set; }
-        public string FileID { get; set; }
     }
 }

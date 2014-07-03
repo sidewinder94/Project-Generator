@@ -12,7 +12,7 @@ namespace GeneratorService
     using System;
     using System.Collections.Generic;
     
-    public partial class User
+    public partial class UserSet
     {
         public int Id { get; set; }
         public string Login { get; set; }

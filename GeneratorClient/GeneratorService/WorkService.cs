@@ -1,4 +1,4 @@
-﻿using GeneratorServiceCallBackContracts;
+﻿
 using GeneratorServiceContracts;
 using System;
 using System.Collections.Generic;
@@ -9,33 +9,14 @@ using System.Threading.Tasks;
 
 namespace GeneratorService
 {
-    class CallBack : ICallBackClient
-    {
-        public void NotifyClient(CallBackMessage msg)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     public class WorkService : IWorkService
     {
-        #region connection to callbackService
-        private static readonly CallBack callback = new CallBack();
-        private readonly DuplexChannelFactory<ICallBackService> channel =
-            new DuplexChannelFactory<ICallBackService>(callback, "callBackEndpoint");
-        private ICallBackService service;
-        #endregion
 
         #region connection to Java Service
 
         #endregion
 
         private List<Guid> authenticatedClients = new List<Guid>();
-
-        public WorkService()
-        {
-            this.service = channel.CreateChannel();
-        }
 
         public Message ServiceOperation(Message msg)
         {
@@ -46,14 +27,52 @@ namespace GeneratorService
                 case Operations.Decode:
                     return Decode(msg);
                 case Operations.Finish:
-                    service.NotifyClient((CallBackMessage)msg);
+                    Finish(msg);
                     break;
+                case Operations.GetCompleted:
+                    return GetCompleted();
+                case Operations.GetDecrypted:
+                    return GetDecrypted(msg);
                 default:
                     throw new NotImplementedException();
                 //break;
             }
             return null;
         }
+
+        private void Finish(Message msg)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Message GetDecrypted(Message msg)
+        {
+            DataGenConnexion database = new DataGenConnexion();
+            DataSet set = database.DataSets.FirstOrDefault(x => x.Id == (int)msg.Data[0]);
+            if (set != null)
+            {
+                return new Message(operation: Operations.GetDecrypted, status: Status.Suceeded, data: new Object[] { set.DecodedText, set.TrustLevelPdf });
+            }
+            else
+            {
+                return new Message(operation: Operations.GetDecrypted, status: Status.Failed, info: "No such file");
+            }
+
+        }
+
+
+        private Message GetCompleted()
+        {
+            var list = new List<Tuple<int, string, string>>();
+            DataGenConnexion database = new DataGenConnexion();
+            foreach (DataSet set in database.DataSets)
+            {
+                var tmp = new Tuple<int, string, string>(set.Id, set.FileName, set.Mail);
+                list.Add(tmp);
+            }
+            return new Message(data: new Object[] { list });
+        }
+
 
         private Message Decode(Message msg)
         {
@@ -75,7 +94,6 @@ namespace GeneratorService
                             currentIndex++;
                         }
                     }
-
                 });
 
 
@@ -94,18 +112,6 @@ namespace GeneratorService
             msg.Status = Status.Suceeded;
             Console.WriteLine("{0} got {1} as userToken", msg.ApplicationToken, msg.UserToken);
             return msg;
-        }
-
-
-
-        public IAsyncResult BeginServiceOperation(Message msg, AsyncCallback callback, object asyncState)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Message EndServiceOperation(IAsyncResult result)
-        {
-            throw new NotImplementedException();
         }
     }
 }
