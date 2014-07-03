@@ -28,5 +28,15 @@ namespace GeneratorClient
             InitializeComponent();
             this.Content = new Login();
         }
+        public void loggedOn()
+        {
+            this.Content = null;
+            this.Content = new Main(this);
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            this.Content = null;
+        }
     }
 }

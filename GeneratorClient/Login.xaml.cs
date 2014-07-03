@@ -45,7 +45,7 @@ namespace GeneratorClient
             msg = client.ServiceOperation(msg);
             ((MainWindow)this.Parent).userToken = msg.UserToken;
             ((MainWindow)this.Parent).applicationToken = msg.ApplicationToken;
-            ((MainWindow)this.Parent).Content = new Main((MainWindow)this.Parent);
+            ((MainWindow)this.Parent).loggedOn();
             client.Close();
         }
     }

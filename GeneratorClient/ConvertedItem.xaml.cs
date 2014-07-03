@@ -1,6 +1,7 @@
 ﻿using GeneratorServiceContracts;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,12 +63,37 @@ namespace GeneratorClient
 
         private void TextButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var saveFileDialog = createSaveDialog("Sauvegarder le texte décrypté", "txt");
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllText(saveFileDialog.FileName, this.decodedText);
+                }
+                catch (IOException ex)
+                {
+                    Console.WriteLine("couldn't write due to {0}", ex.Message);
+                }
+            }
         }
 
         private void PDFButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private System.Windows.Forms.SaveFileDialog createSaveDialog(String title, String defaultExtension)
+        {
+            var saveDialog = new System.Windows.Forms.SaveFileDialog();
+            saveDialog.CheckFileExists = true;
+            saveDialog.CheckPathExists = true;
+            saveDialog.DereferenceLinks = true;
+            saveDialog.OverwritePrompt = true;
+            saveDialog.ValidateNames = true;
+            saveDialog.Title = title;
+            saveDialog.AddExtension = true;
+            saveDialog.DefaultExt = defaultExtension;
+            return saveDialog;
         }
     }
 }

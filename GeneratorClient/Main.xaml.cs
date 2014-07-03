@@ -36,6 +36,7 @@ namespace GeneratorClient
         }
 
         public Main(MainWindow mainWindow)
+            : this()
         {
             if (client == null)
             {
