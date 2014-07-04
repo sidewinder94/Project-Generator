@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using GeneratorServiceContracts;
+using GeneratorClient.GeneratorServiceContracts;
 
 namespace GeneratorClient
 {
@@ -39,9 +39,10 @@ namespace GeneratorClient
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             WorkServiceClient client = new WorkServiceClient("NetTcpBinding_IWorkService");
-            Message msg = new Message(applicationToken: Guid.NewGuid().ToString(),
-                                      operation: Operations.Authenticate,
-                                      status: Status.Sent);
+            Message msg = new Message();
+            msg.ApplicationToken = Guid.NewGuid().ToString();
+            msg.Operation = Operations.Authenticate;
+            msg.Status = Status.Sent;
             msg = client.ServiceOperation(msg);
             ((MainWindow)this.Parent).userToken = msg.UserToken;
             ((MainWindow)this.Parent).applicationToken = msg.ApplicationToken;

@@ -68,6 +68,11 @@
       <DependentUpon>DataGen.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\JavaServer\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="UserSet.cs">
       <DependentUpon>DataGen.tt</DependentUpon>
     </Compile>
@@ -99,9 +104,34 @@
       <LastGenOutput>DataGen.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Service References\JavaServer\Generator.wsdl" />
+    <None Include="Service References\JavaServer\Generator.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\JavaServer\GeneratorService.JavaServer.ServiceOperationResponse1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\JavaServer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JavaServer\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JavaServer\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\JavaServer\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

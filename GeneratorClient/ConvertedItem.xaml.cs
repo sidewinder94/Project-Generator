@@ -1,4 +1,4 @@
-﻿using GeneratorServiceContracts;
+﻿using GeneratorClient.GeneratorServiceContracts;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -52,9 +52,11 @@ namespace GeneratorClient
             this.FileID = FileID;
             this.mainWindow = main;
             WorkServiceClient client = new WorkServiceClient();
-            var msg = client.ServiceOperation(new Message(applicationToken: main.applicationToken,
-                                                userToken: main.userToken,
-                                                operation: Operations.GetDecrypted));
+            var msg = new Message();
+            msg.ApplicationToken = main.applicationToken;
+            msg.UserToken = main.userToken;
+            msg.Operation = Operations.GetDecrypted;
+            msg = client.ServiceOperation(msg);
             this.decodedText = (String)msg.Data[0];
             this.TrustLevelPdf = (byte[])msg.Data[1];
             InitializeComponent();
@@ -63,7 +65,7 @@ namespace GeneratorClient
 
         private void TextButton_Click(object sender, RoutedEventArgs e)
         {
-            var saveFileDialog = createSaveDialog("Sauvegarder le texte décrypté", "txt");
+            var saveFileDialog = Utils.createSaveDialog("Sauvegarder le texte décrypté", "txt");
             if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 try
@@ -79,21 +81,20 @@ namespace GeneratorClient
 
         private void PDFButton_Click(object sender, RoutedEventArgs e)
         {
-
+            var saveFileDialog = Utils.createSaveDialog("Sauvegarder le rapport de confiance", "pdf");
+            if (saveFileDialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                try
+                {
+                    File.WriteAllBytes(saveFileDialog.FileName, this.TrustLevelPdf);
+                }
+                catch (IOException ex)
+                {
+                    Console.WriteLine("couldn't write due to {0}", ex.Message);
+                }
+            }
         }
 
-        private System.Windows.Forms.SaveFileDialog createSaveDialog(String title, String defaultExtension)
-        {
-            var saveDialog = new System.Windows.Forms.SaveFileDialog();
-            saveDialog.CheckFileExists = true;
-            saveDialog.CheckPathExists = true;
-            saveDialog.DereferenceLinks = true;
-            saveDialog.OverwritePrompt = true;
-            saveDialog.ValidateNames = true;
-            saveDialog.Title = title;
-            saveDialog.AddExtension = true;
-            saveDialog.DefaultExt = defaultExtension;
-            return saveDialog;
-        }
+
     }
 }

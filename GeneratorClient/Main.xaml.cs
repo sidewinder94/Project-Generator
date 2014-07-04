@@ -1,6 +1,7 @@
-﻿using GeneratorServiceContracts;
+﻿using GeneratorClient.GeneratorServiceContracts;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text;
@@ -22,7 +23,7 @@ namespace GeneratorClient
     /// </summary>
     public partial class Main : UserControl
     {
-        private static WorkServiceClient client;
+        private WorkServiceClient client;
         private MainWindow mainWindow;
 
         public Main()
@@ -61,9 +62,11 @@ namespace GeneratorClient
             Action action = delegate()
             {
                 WorkServiceClient client = new WorkServiceClient();
-                var data = (List<Tuple<int, string, string>>)client.ServiceOperation(new Message(operation: Operations.GetCompleted,
-                                                                                            applicationToken: this.mainWindow.applicationToken,
-                                                                                            userToken: this.mainWindow.userToken)).Data[0];
+                var mesg = new Message();
+                mesg.Operation = Operations.GetCompleted;
+                mesg.ApplicationToken = this.mainWindow.applicationToken;
+                mesg.UserToken = this.mainWindow.applicationToken;
+                var data = (List<Tuple<int, string, string>>)client.ServiceOperation(msg).Data[0];
                 this.convertedItems.Children.Clear();
                 foreach (Tuple<int, string, string> tuple in data)
                 {
@@ -73,6 +76,44 @@ namespace GeneratorClient
             };
 
             Dispatcher.Invoke(action);
+        }
+
+        private void OpenButton_Click(object sender, RoutedEventArgs e)
+        {
+            var ofd = new System.Windows.Forms.OpenFileDialog();
+            ofd.AddExtension = true;
+            ofd.AutoUpgradeEnabled = true;
+            ofd.CheckFileExists = true;
+            ofd.CheckPathExists = true;
+            ofd.Multiselect = true;
+            ofd.Title = "Ouvrir un fichier a décoder";
+            ofd.ValidateNames = true;
+            if (ofd.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                foreach (String path in ofd.FileNames)
+                {
+                    try
+                    {
+                        var file = File.ReadAllBytes(path);
+                        var msg = new Message();
+                        var data = new object[file.Length];
+                        Array.Copy(file, data, file.Length);
+                        msg.Data = data;
+                        msg.Info = file.GetHashCode().ToString();
+                        msg.Operation = Operations.Decode;
+                        msg.ApplicationToken = this.mainWindow.applicationToken;
+                        msg.UserToken = this.mainWindow.userToken;
+                        this.client.ServiceOperationCompleted += client_ServiceOperationCompleted;
+                        this.client.ServiceOperationAsync(msg);
+                    }
+                    catch (IOException ex)
+                    {
+                        Console.WriteLine("couldn't open {0} for reason : {1}",
+                                          path,
+                                          ex.Message);
+                    }
+                }
+            }
         }
     }
 }
