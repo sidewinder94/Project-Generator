@@ -9,9 +9,7 @@
 
 namespace GeneratorService
 {
-    using System;
-    using System.Collections.Generic;
-    
+
     public partial class UserSet
     {
         public int Id { get; set; }

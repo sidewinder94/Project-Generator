@@ -39,7 +39,7 @@ CREATE TABLE [dbo].[DataSets] (
     [FileID] nvarchar(max)  NOT NULL,
     [FileName] nvarchar(max)  NOT NULL,
     [DecodedText] nvarchar(max)  NOT NULL,
-    [TrustLevelPdf] varbinary(max)  NOT NULL,
+    [TrustLevelPdf] varbinary(max),
     [Mail] nvarchar(max)  NOT NULL
 );
 GO

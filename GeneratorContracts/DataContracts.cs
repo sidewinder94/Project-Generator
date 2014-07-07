@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Runtime.Serialization;
 
 namespace GeneratorServiceContracts
@@ -36,17 +32,17 @@ namespace GeneratorServiceContracts
     [DataContract]
     public class Message
     {
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 0)]
         public String ApplicationToken { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 1)]
         public object[] Data { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 2)]
         public String Info { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 3)]
         public Operations Operation { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 4)]
         public Status Status { get; set; }
-        [DataMember]
+        [DataMember(IsRequired = true, Order = 5)]
         public String UserToken { get; set; }
 
         public Message() { }
