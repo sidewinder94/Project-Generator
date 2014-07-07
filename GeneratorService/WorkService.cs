@@ -13,14 +13,36 @@ using System.Text.RegularExpressions;
 
 namespace GeneratorService
 {
+
+
     public class WorkService : IWorkService
     {
+        #region connection to callbackService
+        private DuplexChannelFactory<ISubService> channel;
+        private ISubService service;
 
-        #region connection to Java Service
-
+        private class CallbackClass : IClientCallback
+        {
+            public void NotifyClients()
+            {
+                throw new NotImplementedException();
+            }
+        }
         #endregion
+
         private static readonly Hashtable filesAnalyzed = new Hashtable();
         private List<Guid> authenticatedClients = new List<Guid>();
+
+        public WorkService()
+        {
+            channel = new DuplexChannelFactory<ISubService>(new CallbackClass(), "callBackEndpoint");
+            service = channel.CreateChannel();
+        }
+
+        ~WorkService()
+        {
+            channel.Close();
+        }
 
         public Message ServiceOperation(Message msg)
         {
@@ -52,6 +74,7 @@ namespace GeneratorService
              * [2] mail
              * [3] pdf indice confiance
              */
+            Console.WriteLine("Finished called");
             WorkService.filesAnalyzed[msg.Info] = new Tuple<bool, Message>(false, msg);
             var database = new DataGenConnexion();
             var data = new DataSet();
@@ -70,6 +93,7 @@ namespace GeneratorService
             database.DataSets.Add(data);
             database.SaveChanges();
             database = null;
+            service.NotifyClients();
         }
 
         private Message GetDecrypted(Message msg)
@@ -134,6 +158,7 @@ namespace GeneratorService
                             finalData[0] = toto;
 
                             Console.WriteLine(Encoding.UTF8.GetString(toto));
+
                             Interlocked.Increment(ref count);
 
                             client.ServiceOperation(msg.ApplicationToken,
