@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://facade.bank.com/" targetNamespace="http://facade.bank.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ServiceOperation" type="tns:ServiceOperation" />
+  <xs:element name="ServiceOperationResponse" type="tns:ServiceOperationResponse" />
+  <xs:complexType name="ServiceOperation">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="arg1" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="arg2" type="xs:string" />
+      <xs:element name="arg3" type="xs:int" />
+      <xs:element name="arg4" type="xs:int" />
+      <xs:element minOccurs="0" name="arg5" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ServiceOperationResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

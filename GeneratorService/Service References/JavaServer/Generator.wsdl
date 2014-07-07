@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://facade.bank.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="Generator" targetNamespace="http://facade.bank.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="GeneratorPortBindingPolicy">
+    <ns1:OptimizedMimeSerialization xmlns:ns1="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+  </wsp:Policy>
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://pc-paul:27269/Generator/Generator?xsd=1" namespace="http://facade.bank.com/" />
+    </xsd:schema>
+  </types>
+  <message name="ServiceOperation">
+    <part name="parameters" element="tns:ServiceOperation" />
+  </message>
+  <message name="ServiceOperationResponse">
+    <part name="parameters" element="tns:ServiceOperationResponse" />
+  </message>
+  <portType name="Generator">
+    <operation name="ServiceOperation">
+      <input wsam:Action="http://facade.bank.com/Generator/ServiceOperationRequest" message="tns:ServiceOperation" />
+      <output wsam:Action="http://facade.bank.com/Generator/ServiceOperationResponse" message="tns:ServiceOperationResponse" />
+    </operation>
+  </portType>
+  <binding name="GeneratorPortBinding" type="tns:Generator">
+    <wsp:PolicyReference URI="#GeneratorPortBindingPolicy" />
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="ServiceOperation">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="Generator">
+    <port name="GeneratorPort" binding="tns:GeneratorPortBinding">
+      <soap:address location="http://pc-paul:27269/Generator/Generator" />
+    </port>
+  </service>
+</definitions>

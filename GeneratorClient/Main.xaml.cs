@@ -42,7 +42,6 @@ namespace GeneratorClient
             if (client == null)
             {
                 client = new WorkServiceClient("NetTcpBinding_IWorkService");
-                client.ServiceOperationCompleted += client_ServiceOperationCompleted;
             }
             if (client.State != CommunicationState.Opened)
             {
@@ -58,24 +57,27 @@ namespace GeneratorClient
 
         void messageReceived(Message msg)
         {
-            MessageBox.Show("Le fichier {0} est décodé", msg.Info);
-            Action action = delegate()
+            if (msg != null)
             {
-                WorkServiceClient client = new WorkServiceClient();
-                var mesg = new Message();
-                mesg.Operation = Operations.GetCompleted;
-                mesg.ApplicationToken = this.mainWindow.applicationToken;
-                mesg.UserToken = this.mainWindow.applicationToken;
-                var data = (List<Tuple<int, string, string>>)client.ServiceOperation(msg).Data[0];
-                this.convertedItems.Children.Clear();
-                foreach (Tuple<int, string, string> tuple in data)
+                MessageBox.Show("Le fichier {0} est décodé", msg.Info);
+                Action action = delegate()
                 {
-                    this.convertedItems.Children.Add(new ConvertedItem(tuple.Item1, tuple.Item2, tuple.Item3, this.mainWindow));
-                }
-                client.Close();
-            };
+                    WorkServiceClient client = new WorkServiceClient();
+                    var mesg = new Message();
+                    mesg.Operation = Operations.GetCompleted;
+                    mesg.ApplicationToken = this.mainWindow.applicationToken;
+                    mesg.UserToken = this.mainWindow.applicationToken;
+                    var data = (List<Tuple<int, string, string>>)client.ServiceOperation(msg).Data[0];
+                    this.convertedItems.Children.Clear();
+                    foreach (Tuple<int, string, string> tuple in data)
+                    {
+                        this.convertedItems.Children.Add(new ConvertedItem(tuple.Item1, tuple.Item2, tuple.Item3, this.mainWindow));
+                    }
+                    client.Close();
+                };
 
-            Dispatcher.Invoke(action);
+                Dispatcher.Invoke(action);
+            }
         }
 
         private void OpenButton_Click(object sender, RoutedEventArgs e)
@@ -94,11 +96,10 @@ namespace GeneratorClient
                 {
                     try
                     {
-                        var file = File.ReadAllBytes(path);
+                        var file = File.ReadAllText(path);
                         var msg = new Message();
-                        var data = new object[file.Length];
-                        Array.Copy(file, data, file.Length);
-                        msg.Data = data;
+
+                        msg.Data = new object[] { file, (object)path, null, null };
                         msg.Info = file.GetHashCode().ToString();
                         msg.Operation = Operations.Decode;
                         msg.ApplicationToken = this.mainWindow.applicationToken;

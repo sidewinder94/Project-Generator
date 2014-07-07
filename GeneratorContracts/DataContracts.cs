@@ -50,6 +50,7 @@ namespace GeneratorServiceContracts
         public String UserToken { get; set; }
 
         public Message() { }
+
         public Message(String applicationToken = null, object[] data = null, String info = null,
                        Operations? operation = null, Status? status = null, String userToken = null)
         {
