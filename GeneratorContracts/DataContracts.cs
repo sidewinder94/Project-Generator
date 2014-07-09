@@ -47,8 +47,8 @@ namespace GeneratorServiceContracts
 
         public Message() { }
 
-        public Message(String applicationToken = null, object[] data = null, String info = null,
-                       Operations? operation = null, Status? status = null, String userToken = null)
+        public Message(String applicationToken, object[] data, String info,
+                       Operations? operation, Status? status, String userToken)
         {
             ApplicationToken = applicationToken;
             Data = data;

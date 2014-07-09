@@ -1,0 +1,1367 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="824375fc-9531-4e6d-bbdf-715c3dce6cf1"
+  name="GeneratorServiceContracts"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="b060d44a-5a3c-49fd-9784-5b34dfa03658"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGeneratorServiceContracts"
+      tag="ViewCode" />
+  </referencesInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="5e3f61a6-8fa1-420e-893f-e9fe60a7b325">
+      <profileInstance
+        Id="eeca7000-8f3d-4783-92d0-6c6b18d66306"
+        name="CSharpProfile" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="ea5ecb97-f7c4-418e-bbd5-22a702178ff8"
+        name="Message"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="3ca45c10-57c1-4867-bb8a-3a85446d3f1c"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d5a2142d-9d86-410f-b3c5-4abe82f878a2"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="558ed439-eed0-4222-81fc-8450cad7cc2f">
+                <propertyInstance
+                  Id="f3fa3ec6-9971-43c2-9402-2fc976f4294c"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="8162004e-9976-4bdf-a511-f1810349a69c">
+                <propertyInstance
+                  Id="74a4468b-d28d-4cce-9d10-f0da20a80e31"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9b394cf5-ce3d-48ce-b9d6-dc8484221223">
+                <propertyInstance
+                  Id="dd2823a8-73c3-4e9e-9010-98bb76b68431"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d56d2383-523a-4053-a617-8a27530472e0">
+                <propertyInstance
+                  Id="caf3ce6c-acf8-43b4-b480-8f29cdf0325f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e06e05f5-f1c6-4721-9d45-ca22f136ea74">
+                <propertyInstance
+                  Id="88823b58-d8c4-4cca-b61e-9f24cfdfb398"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <targetEnds>
+          <association
+            Id="11b9baf8-a10f-411c-bf80-f768cff06ad1"
+            isDerived="false"
+            sourceEndRoleName="Message"
+            targetEndRoleName="Data"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a2ca8bca-b82d-43ee-9b51-28433227e57e"
+              LastKnownName="Object"
+              LastKnownLocation="Package1_1423.uml" />
+            <description>La propriété Data référence le type Object.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3d392e6-4269-45c6-91c4-11fb34ccc66e"
+                  name="Message"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="b21e01b3-4a59-4a21-b8d7-5b53d69d5a61"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="53d4b234-f195-4673-ace9-8015a641e49b"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a0175ea4-43e9-495f-8add-e676303ea140"
+                  name="Data"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isOrdered="true"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="576afaa7-adda-4528-855f-3e068a6e9c04"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="1a45f3c6-25fa-496b-a301-52eb117a059a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9590ca32-ec57-42a3-a086-0a75c0545453"
+            isDerived="false"
+            sourceEndRoleName="Message"
+            targetEndRoleName="Operation"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="53aa3afd-fa5f-4d1e-8acd-58d75a2a4919"
+              LastKnownName="Operations"
+              LastKnownLocation="Package4_1426.uml" />
+            <description>La propriété Operation référence le type Operations.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ff457394-d7d3-47be-aa39-970db48586d8"
+                  name="Message"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="34b1aca8-3969-47e5-9627-5ad83118e09b"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a778c198-27a5-43eb-9098-11c3f67fa434"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="51d13581-d7af-4f41-89e3-c94d79e2502d"
+                  name="Operation"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="9819435a-5a33-4de4-863c-5d4d61a3c5d7"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="f706f6e5-1ae2-47c5-8f82-8d10db7e6c3d"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="f93aa3c7-1559-4b70-9594-ee13a32c63e7"
+            isDerived="false"
+            sourceEndRoleName="Message"
+            targetEndRoleName="Status"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="c394a234-46d1-4350-a0a5-3d5eabc7471b"
+              LastKnownName="Status"
+              LastKnownLocation="Package4_1426.uml" />
+            <description>La propriété Status référence le type Status.</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71f9886e-b5fa-42ac-a942-fd5a887d0d9b"
+                  name="Message"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="90bfbea1-d687-4ad3-b2f9-86b633ed06a6"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="26ac6bc8-be8c-4b0e-a838-b86201826df8"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="f92e5573-59f6-4d6c-ae23-798098d571a8"
+                  name="Status"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="aab6d355-6f0c-4599-ba0a-cdaa5f73d69f"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="7f971580-b332-41e0-94b0-e117ebb3a3b6"
+                      name="Upper"
+                      value="1" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="d4bcdc4d-0443-43a5-a99f-db14d68e3c96"
+            name="ApplicationToken"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="f019567a-048a-47f4-b719-0defce18fdfa"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DApplicationToken"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="701e626b-bc27-4dc3-9122-7e185323c335"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="45b49bb3-f32a-40a6-a9bc-d92a1666165e">
+                    <propertyInstance
+                      Id="80dc284d-53b8-4227-b16d-5955f299d67a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f690450-6544-48ab-8ca3-58af53aaa9ef">
+                    <propertyInstance
+                      Id="78b4f19e-0635-408b-b9ed-ef1593926d05"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="50281534-a48d-4353-a3d4-3d1f1d03668d">
+                    <propertyInstance
+                      Id="f6db1830-71df-431b-83a8-ff51328b04a9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3b09c61c-f16a-4998-a2e5-c73c57410ea5">
+                    <propertyInstance
+                      Id="cc7611ae-cd7a-469a-8309-cbdca148ac61"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="16b21181-1432-4a37-a5f9-a4d03f7af8fd">
+                    <propertyInstance
+                      Id="c220ec06-1597-44cc-b1ec-4ece48f0e143"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="bbd73af2-fc4f-400c-a54c-76f6f2164c86">
+                    <propertyInstance
+                      Id="095433cd-a8d9-4692-ba29-1e0a7531e22a"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="4e29df12-8f04-4789-9040-576e5b61bab1">
+                    <propertyInstance
+                      Id="7986d4a3-a634-4390-9f65-0f5f1629ab22"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelisation.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="2090854f-a23a-4711-b176-89a4e39998f5"
+            name="Data"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isOrdered="true"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="105f5fd3-65f1-4236-8277-c8da5e466123"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DData"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="a7327815-7c09-4226-aacc-f1912796513a"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="80dc1eee-b1ba-41e6-ac80-bcea095c02c8">
+                    <propertyInstance
+                      Id="f37bc676-cc87-45be-af24-0715905b410a"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="23a11f20-c850-438e-9de3-e2812fd316dc">
+                    <propertyInstance
+                      Id="bfb308ac-9c69-4b79-8c2a-82b2e9446208"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="f7908c41-13d9-4c42-b082-bbee0751b8d7">
+                    <propertyInstance
+                      Id="080fd964-3775-42f5-b795-3118132ad1ee"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="04995bee-a156-4083-bf0d-05bc5f530aa8">
+                    <propertyInstance
+                      Id="c2a94cb1-7610-43c6-851f-a998a87a59e0"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aaf4ad37-4e51-4513-a4a8-11cfdac308f5">
+                    <propertyInstance
+                      Id="d8b7ee93-6517-4999-9ec1-f054cac56ee4"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="db4b3745-df11-4f66-b127-4917769bc878">
+                    <propertyInstance
+                      Id="9193d311-b137-4ad2-825b-ca6f6773fd35"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="5d553eca-9df4-429a-a3d0-d879f3d88b6a">
+                    <propertyInstance
+                      Id="9cdcd989-3e7d-4427-8e9f-e318677419f8"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <lowerValueInternal>
+              <literalString
+                Id="5298f810-9855-4cef-b020-91415b9f051e"
+                name="Lower"
+                value="*" />
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString
+                Id="f9efd2b7-e5f8-4402-b765-dcf0a8753b9c"
+                name="Upper"
+                value="*" />
+            </upperValueInternal>
+            <type_NamedElement>
+              <classMoniker
+                Id="a2ca8bca-b82d-43ee-9b51-28433227e57e"
+                LastKnownName="Object"
+                LastKnownLocation="Package1_1423.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="66526d03-9b39-4bb7-bb72-b8bac7d0bf9c"
+            name="Info"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="2ddeb48a-bfa1-42ac-bf72-43399b721040"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DInfo"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="4d247fb3-d204-4f83-aedb-a72d1274f4c0"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e70d63c0-4060-4668-827f-44d44266a6a5">
+                    <propertyInstance
+                      Id="885047bc-2dcd-4ac2-9238-7be28c1dc699"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="691efa85-9aea-4035-ac7e-55fcb97cd6bf">
+                    <propertyInstance
+                      Id="6ed98e0f-4ed7-4455-bb7d-5e6d8c1ac71a"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c81a6c69-98c9-40db-8b15-bcba52539792">
+                    <propertyInstance
+                      Id="8b4c6f9d-81bd-4b52-9fd8-7b81f93b6a9e"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="34e619d4-2495-4280-a3e1-a3bae0bd93a9">
+                    <propertyInstance
+                      Id="be63b5bb-1cb5-46af-8203-54d68df11c46"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e5bb1724-1df5-4f3e-aa85-1c817a4f03de">
+                    <propertyInstance
+                      Id="eb306ffe-4e1a-4da8-a6e9-3b689e513aa7"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="d7927eb3-913b-4e08-a208-585f94cbf9dd">
+                    <propertyInstance
+                      Id="62ef3f60-ba80-4bea-aca2-5ce5a5a9d7c4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6640cb72-2c84-456a-9834-4276461a1078">
+                    <propertyInstance
+                      Id="a4f5ef10-5d95-4782-a6fe-03c50f067160"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelisation.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="bfc11a08-0f42-40e5-ac44-b1bbcd09fadc"
+            name="Operation"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0092dd96-99b5-472d-815d-50f282d66663"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DOperation"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="d2814090-717b-4678-9619-3ddfa9097d18"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="7983a971-838a-4198-b8e6-83ffaf26ef1d">
+                    <propertyInstance
+                      Id="f2ef49fa-944f-494f-af11-b875d47086c3"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="88b0c7e0-67ae-46f8-b9a3-d5d0171ed8e7">
+                    <propertyInstance
+                      Id="b85cc436-19ae-4ee4-b467-a33a1439256d"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9badc1ac-12e7-4b35-a112-902493688ec8">
+                    <propertyInstance
+                      Id="31a7681e-d7c5-4669-8616-a5f9b7e8f094"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fd3b0161-bf48-45f1-9b19-93e90cec7153">
+                    <propertyInstance
+                      Id="2d8aa863-b1c5-48aa-a806-36e89751482b"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e6e91d56-89a4-46e7-b9ea-1df0de2cb8ee">
+                    <propertyInstance
+                      Id="4d583557-a8be-43a3-b539-b0ec4330bbbe"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="be251fdb-21fc-45d5-8f0f-f245fd95d844">
+                    <propertyInstance
+                      Id="0e30d13b-09a2-4a66-aa1c-c91470eb840c"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b573878e-0c51-4c94-87d7-60863d944ccc">
+                    <propertyInstance
+                      Id="08078a28-b0b7-4f8d-9a69-42caa103b875"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="53aa3afd-fa5f-4d1e-8acd-58d75a2a4919"
+                LastKnownName="Operations"
+                LastKnownLocation="Package4_1426.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="99fd2f42-3875-4f5b-b138-6e45577f6933"
+            name="Status"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="0c270877-50a7-4f47-a560-ad24cacb2c8e"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DStatus"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5189f075-beda-4be1-9050-a073a810de9c"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c90f3d79-0b55-4d5e-945c-633f9b80d02e">
+                    <propertyInstance
+                      Id="95f02515-bfcf-4c25-8d05-b8835e15e861"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="feb8df65-2712-477b-bedf-6d15f9808757">
+                    <propertyInstance
+                      Id="8ec06314-8b9c-443d-8e93-ef61de96d6ff"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="692e450e-329e-495c-8f08-7c43de2577b1">
+                    <propertyInstance
+                      Id="80218e95-e518-49ac-b80c-2bb4d8f68bb9"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="987b769f-c7ce-430d-8407-95d365a989d8">
+                    <propertyInstance
+                      Id="75f22f07-e8b7-4368-b070-14b91e72b572"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="2f4b6e4c-f81a-4fee-90ee-e8ab37e9560f">
+                    <propertyInstance
+                      Id="51fa928b-4815-4248-819d-b23df9e34bc8"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b32cc22b-fb2e-4d3c-b2b6-90e2115f0aa5">
+                    <propertyInstance
+                      Id="b1720846-8184-436b-9175-1d6b7368acee"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3302e355-4dd9-4453-af58-66a0137326df">
+                    <propertyInstance
+                      Id="b8b2d8cb-a6ee-4f0b-afc0-0a32088fb93c"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <enumerationMoniker
+                Id="c394a234-46d1-4350-a0a5-3d5eabc7471b"
+                LastKnownName="Status"
+                LastKnownLocation="Package4_1426.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="167dc3c4-e24d-4eb0-8dd5-d681b472cb1b"
+            name="UserToken"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <referencesInternal>
+              <reference
+                Id="4e0ca60e-55a9-495d-ae01-7a4d915c6364"
+                handle="viewcode://./CodeSchema_Property?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3DUserToken"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="b60df242-4552-4a94-8aae-67064e3e3bf6"
+                name="property"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="aa0e451b-5e73-4b6c-8b65-d3a4a0326f15">
+                    <propertyInstance
+                      Id="558fe626-bb13-4a1e-bb5f-7e40ee96ca85"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="9f496662-31ef-4a2a-9d15-231a53f58ef8">
+                    <propertyInstance
+                      Id="15cc201c-edd8-4730-b7c0-96bd419308a2"
+                      name="Get"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3cc58341-db42-4f2f-827a-8dca3cc0815a">
+                    <propertyInstance
+                      Id="60ea28af-43ec-4c04-817e-dd3ef4a31c9b"
+                      name="HasBody"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="30146beb-9d6f-4c44-b1b2-e06d06ff7ec1">
+                    <propertyInstance
+                      Id="541fcf85-db8f-451c-8a64-5fb9821eabb8"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b8c0b55b-db90-4ac5-a65c-c4d0e0d700f1">
+                    <propertyInstance
+                      Id="0546589c-1d7b-4686-ad4e-9bee97a4af3b"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="6911d2e9-0479-4c99-ac45-1dc8e5c307e0">
+                    <propertyInstance
+                      Id="685dc29e-1b2c-4c32-b701-60fd63069bb6"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a27c27a5-67ae-4a0f-a5c6-16d1e55621c8">
+                    <propertyInstance
+                      Id="8237b4c3-2c94-44a7-b1ce-80ff75740555"
+                      name="Set"
+                      value="public" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <type_NamedElement>
+              <primitiveTypeMoniker
+                Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                LastKnownName="String"
+                LastKnownLocation="Modelisation.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="ac46110a-595c-4b90-b7b3-999bbd9044ff"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="767d2acb-d1dc-40fd-8649-a29fc930c696"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D.ctor"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="5725c889-c9fe-428e-974f-34ab3a1d649a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1647b5dc-8a63-4d11-b234-d3e7d74e1a43">
+                    <propertyInstance
+                      Id="21bdb3de-314a-4de2-8538-b4b38d010b93"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="fca16b91-ba6a-4aa3-ae94-34e47181f310">
+                    <propertyInstance
+                      Id="cc6b0cbf-a7d9-4a5a-bf6d-b8fbe3277c07"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="08a39849-b58e-414a-8531-2cc055bdf724">
+                    <propertyInstance
+                      Id="864f908d-31ad-4a6a-8bdf-4350db687cbc"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="17dd8c4e-735f-4745-a73f-20b892904b4b">
+                    <propertyInstance
+                      Id="1d76a580-f52b-4559-a0ce-42f0ac9b1fd0"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a38dcc6c-d153-4a67-8f96-b932991d9cc3">
+                    <propertyInstance
+                      Id="2ec67a00-a9bb-444c-91ad-69b455a4de00"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="ede3005a-774a-48b0-a592-e32061a7175a">
+                    <propertyInstance
+                      Id="6584f18b-1a5a-4b3d-acf0-3e23f5862d1f"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+          </operation>
+          <operation
+            Id="2d2f5c46-6d84-4abd-bc75-f5aa0a9bcac1"
+            name="Message"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="eecaed0c-7e1e-4619-88d0-6111dcb2d3f3"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="963cdb2f-d172-42c9-8ae2-43d9492b5ae9"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="a51de3be-826c-4634-97e1-d20dd9800c73">
+                    <propertyInstance
+                      Id="913a3660-59f9-4029-96c6-f4471303cf56"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e19b656f-eb6e-459e-8bff-d3788655251a">
+                    <propertyInstance
+                      Id="368077a7-58a3-4c53-9479-961f78d4dc23"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="c85286cd-dfc5-4706-a90a-42bd762291b8">
+                    <propertyInstance
+                      Id="f342b97e-5e15-49d9-a758-decad8136f82"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="dd334c31-2bc2-4da5-b2b0-9ae480bfdcea">
+                    <propertyInstance
+                      Id="099bff52-0f80-441c-8fc5-79f9b049d6e3"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="3a1dcdcc-53a7-4ccc-83bd-9088b58d8765">
+                    <propertyInstance
+                      Id="0f36a2f2-b3a1-4dfd-a5cb-170bd76bc0d4"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="b4a83905-d8bd-4efd-b5be-a323bc7179c6">
+                    <propertyInstance
+                      Id="a962aec9-1938-4ce5-9170-b89191f7324d"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="3d85ed8d-9b00-4d37-a228-0c246078aa63"
+                  name="applicationToken"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="669d6b20-0c9e-4453-81fb-48312e091dd9"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DapplicationToken"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modelisation.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="95f3013a-b7a1-4bca-92bf-6b1fabf451cd"
+                  name="data"
+                  direction="In"
+                  isOrdered="true">
+                  <referencesInternal>
+                    <reference
+                      Id="4fdc8c45-3b14-4cb4-9a46-d4120d5e0153"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Ddata"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <lowerValueInternal>
+                    <literalString
+                      Id="c7ad2973-33c7-4fb2-b197-73a111512b53"
+                      name="Lower"
+                      value="*" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="30a90a49-7b69-4f20-bd1d-dd6d3b50aa0a"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="a2ca8bca-b82d-43ee-9b51-28433227e57e"
+                      LastKnownName="Object"
+                      LastKnownLocation="Package1_1423.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="4ded1adb-9622-4262-b2a0-691f0036437e"
+                  name="info"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="54546294-5dc9-4379-9c35-3b94ca21994e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dinfo"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modelisation.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9a9c4d93-8fcb-4cd1-a882-0abb0f2918dc"
+                  name="operation"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="8263bd97-5451-417c-ae33-5fffa08052ba"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Doperation"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="cb4ddd5a-f965-4c0f-bcb3-b9b229dd2425"
+                      LastKnownName="Nullable&lt;Operations‎&gt;"
+                      LastKnownLocation="Package1_1423.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="02ec08c5-6d8c-49bc-bce0-d5010ff09bc4"
+                  name="status"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="0dd72682-7e4d-4234-b762-76e1d50b7879"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3Dstatus"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="6da0f1ee-628b-48d9-bf03-a13c3d0a432b"
+                      LastKnownName="Nullable&lt;Status‎&gt;"
+                      LastKnownLocation="Package1_1423.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="5ce08794-5940-493b-99f1-bfcd4c45e40a"
+                  name="userToken"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="aaae06ea-20ac-4422-8584-1a8e9ae6be19"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DNullable GenericParameterCount%3D1 GenericArguments%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus)]))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DuserToken"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <primitiveTypeMoniker
+                      Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+                      LastKnownName="String"
+                      LastKnownLocation="Modelisation.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d5a1b381-32ea-4fc8-b4e2-83cef331d301"
+        name="IWorkService"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="5a73f09b-abe9-43b5-9cbf-e4ac896d7e01"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DIWorkService"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="d507b265-4da2-41d8-bcc6-0eba63cdc93d"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="13a030d5-3cd6-4962-b7de-61d27a57882a">
+                <propertyInstance
+                  Id="e126a7f5-65cb-493c-92b9-8016b7a5a0f1"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b2110857-0cd2-498f-bb74-1a4d54e2bfd4">
+                <propertyInstance
+                  Id="6700beed-0e56-4d7c-96d4-bfc75922f188"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4fa2f244-2c1a-4bdc-aa2a-da13ef1c6133">
+                <propertyInstance
+                  Id="0c4e7422-7f3b-439e-b39c-346e8835afc9"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d812028e-1815-4c1f-b770-90ce054a019f">
+                <propertyInstance
+                  Id="e4ae4ce4-cde9-4d70-b5cd-1a62e9f6c880"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <suppliersInternal>
+          <dependency
+            Id="05c31c7b-e8d5-43a2-adfd-d0385831f77f">
+            <classMoniker
+              Id="ea5ecb97-f7c4-418e-bbd5-22a702178ff8"
+              LastKnownName="Message"
+              LastKnownLocation="Package4_1426.uml" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperations>
+          <operation
+            Id="5652fae6-8ed2-4699-bf63-dd2416d159cf"
+            name="ServiceOperation"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="true"
+            concurrency="Sequential"
+            isQuery="false">
+            <referencesInternal>
+              <reference
+                Id="2cbe7a6a-6558-4f04-b078-f4e67d5dc935"
+                handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DIWorkService Member%3D(Name%3DServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage)])"
+                tag="ViewCode" />
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance
+                Id="9b53694e-f03c-4d34-b6e4-1f794720177a"
+                name="method"
+                profile="CSharpProfile">
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="637a769b-493d-4b2a-b483-6614fc8cdc9c">
+                    <propertyInstance
+                      Id="0ab9dc3f-ad97-4327-9285-0aaf6d11165d"
+                      name="ClrAttributes" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="8f190e87-0645-4386-b3a9-6a574984a208">
+                    <propertyInstance
+                      Id="55675b4e-682e-4310-9952-e713b052cb86"
+                      name="IsPartial"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="82de7aea-b55e-469c-8492-d7ea8068bf1e">
+                    <propertyInstance
+                      Id="7561ee8c-7d24-4ca1-8dd1-5bebe9b68678"
+                      name="IsUnsafe"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="1883f197-99bc-4fd9-8082-4fcd02b2b45b">
+                    <propertyInstance
+                      Id="9fa224ef-46a7-40ee-91f7-4a00201d5902"
+                      name="Inheritance"
+                      value="none" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="e3b39040-2c0d-4ce3-b3f1-f03fb43fa263">
+                    <propertyInstance
+                      Id="a184866b-7495-4a8a-abb3-648a9d90a1f8"
+                      name="PackageVisibility"
+                      value="internal" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances
+                    Id="44b13f15-5869-42a6-be31-1f4ee4da3a4e">
+                    <propertyInstance
+                      Id="cc8694bb-f3b9-4ef7-ae27-97a507e31730"
+                      name="params"
+                      value="false" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="a30d55ce-b8de-455b-b294-90d17f10606b"
+                  direction="Return">
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ea5ecb97-f7c4-418e-bbd5-22a702178ff8"
+                      LastKnownName="Message"
+                      LastKnownLocation="Package4_1426.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="7604cb1e-3d3d-40b6-8e2a-bf812b2522fa"
+                  name="msg"
+                  direction="In">
+                  <referencesInternal>
+                    <reference
+                      Id="84a37e3d-556e-46ab-ab4a-e4b68ca4ec7e"
+                      handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DIWorkService Member%3D(Name%3DServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DMessage)]) ParameterIdentifier%3Dmsg"
+                      tag="ViewCode" />
+                  </referencesInternal>
+                  <type_NamedElement>
+                    <classMoniker
+                      Id="ea5ecb97-f7c4-418e-bbd5-22a702178ff8"
+                      LastKnownName="Message"
+                      LastKnownLocation="Package4_1426.uml" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="53aa3afd-fa5f-4d1e-8acd-58d75a2a4919"
+        name="Operations"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="2bd5c365-870b-47b2-92da-4590939efc5d"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="b7c62f55-ea2a-4784-964d-fb4e65d56d5b"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="af0e99b3-57cf-4b46-8af2-bee94f255949">
+                <propertyInstance
+                  Id="e8d61507-925c-4872-a134-0c20b35f6026"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="22571932-8bdb-4966-a9cf-6a2f987e9c80">
+                <propertyInstance
+                  Id="1e2d0fb4-d49c-4517-a081-8b75f21af26d"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9eadc047-55d4-4df9-bef4-15447a12cd2f">
+                <propertyInstance
+                  Id="de741054-a633-431e-97ea-ad8fe2840fc4"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="64c5ed49-cd38-4fe3-8212-2b2d63d062ad"
+            name="Authenticate">
+            <referencesInternal>
+              <reference
+                Id="3bcdfc9f-9a4e-466f-89da-50503b18a9b2"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations Member%3DAuthenticate"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="ab25d594-3ca2-41bc-a683-df977abddb92"
+            name="Decode">
+            <referencesInternal>
+              <reference
+                Id="75c30169-086a-43a3-899d-6a262b06ae7d"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations Member%3DDecode"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="dd8a2fa1-f63f-4ced-bbb2-dfb15f2c9cca"
+            name="Finish">
+            <referencesInternal>
+              <reference
+                Id="a3f51a53-45a7-4e1b-8203-86818d3e6a6c"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations Member%3DFinish"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="35feae5e-3730-414f-8e7b-dd4a0341e091"
+            name="GetCompleted">
+            <referencesInternal>
+              <reference
+                Id="c4a14cd8-fa07-44f5-943d-183d07dceca8"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations Member%3DGetCompleted"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="b959fe17-925b-49e7-82c9-e8360eb7650e"
+            name="GetDecrypted">
+            <referencesInternal>
+              <reference
+                Id="45ef7c89-0b39-4263-a101-679d82db3773"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DOperations Member%3DGetDecrypted"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="c394a234-46d1-4350-a0a5-3d5eabc7471b"
+        name="Status"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="b5491bfb-0e5b-4287-a70d-469844ff7067"
+            handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="0fc4b51a-60f8-4a08-b1b4-22527ae4e34f"
+            name="enum"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e6fd4b02-b583-480e-8c8e-0c70199a4ba4">
+                <propertyInstance
+                  Id="3ffb0ab2-700b-4334-bda1-97c0747a27ec"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="35e7cef5-3c26-4460-8dc5-f0ec94bd3f00">
+                <propertyInstance
+                  Id="e9dde16b-bcb1-4e36-9db4-c13b22889b00"
+                  name="BaseType"
+                  value="int" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="cfdc50a8-8934-44c2-a0e0-fa7d1d3d970a">
+                <propertyInstance
+                  Id="5848a181-60ba-484a-905c-5a6ea7fe0600"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="ad3bf9b2-f4ca-4bd7-92ec-141e807aadc0"
+            name="Sent">
+            <referencesInternal>
+              <reference
+                Id="116daa68-dfe5-49a3-a3e2-bc696347d913"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus Member%3DSent"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="873d3da6-94e2-4488-bd0b-5f2ce5b762ff"
+            name="Suceeded">
+            <referencesInternal>
+              <reference
+                Id="ea6f9eb5-3f74-4af5-96bf-48d619efb749"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus Member%3DSuceeded"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+          <enumerationLiteral
+            Id="3b33acf3-8a53-4f70-adf9-e291c0bafd21"
+            name="Failed">
+            <referencesInternal>
+              <reference
+                Id="78cad3d0-ea9d-4729-a037-a0ef381b5b87"
+                handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorContracts%2Fbin%2FDebug%2FGeneratorServiceContracts.dll Namespace%3DGeneratorServiceContracts Type%3DStatus Member%3DFailed"
+                tag="ViewCode" />
+            </referencesInternal>
+          </enumerationLiteral>
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

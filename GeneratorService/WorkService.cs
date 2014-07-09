@@ -77,6 +77,7 @@ namespace GeneratorService
             WorkService.filesAnalyzed[msg.Info] = new Tuple<bool, Message>(false, msg);
             var database = new DataGenConnexion();
             var data = new DataSet();
+            data.DecodedText = (string)msg.Data[0];
             data.FileID = msg.Info;
             data.FileName = msg.Data[1] as String;
             if (data.FileName == null)
@@ -92,21 +93,30 @@ namespace GeneratorService
             database.DataSets.Add(data);
             database.SaveChanges();
             database = null;
+            if (channel.State == CommunicationState.Faulted)
+            {
+                channel.Abort();
+                service = channel.CreateChannel();
+            }
             service.NotifyClients();
         }
 
         private Message GetDecrypted(Message msg)
         {
             DataGenConnexion database = new DataGenConnexion();
-            DataSet set = database.DataSets.FirstOrDefault(x => x.Id == (int)msg.Data[0]);
+            string msgId = (string)msg.Data[0];
+            DataSet set = database.DataSets.FirstOrDefault(x => x.FileID == msgId);
             database = null;
             if (set != null)
             {
-                return new Message(operation: Operations.GetDecrypted, status: Status.Suceeded, data: new Object[] { set.DecodedText, set.TrustLevelPdf });
+                return new Message(operation: Operations.GetDecrypted, status: Status.Suceeded,
+                                   data: new Object[] { set.DecodedText, set.TrustLevelPdf },
+                                   applicationToken: msg.ApplicationToken,
+                                   userToken: msg.UserToken, info: "");
             }
             else
             {
-                return new Message(operation: Operations.GetDecrypted, status: Status.Failed, info: "No such file");
+                return new Message(operation: Operations.GetDecrypted, status: Status.Failed, info: "No such file", data: new Object[0], applicationToken: msg.ApplicationToken, userToken: msg.UserToken);
             }
 
         }
@@ -114,14 +124,20 @@ namespace GeneratorService
 
         private Message GetCompleted()
         {
-            var list = new List<Tuple<int, string, string>>();
             DataGenConnexion database = new DataGenConnexion();
-            foreach (DataSet set in database.DataSets)
+            var objects = new Object[database.DataSets.Count() * 3];
+            int i = 0;
+            foreach (DataSet data in database.DataSets)
             {
-                var tmp = new Tuple<int, string, string>(set.Id, set.FileName, set.Mail);
-                list.Add(tmp);
+
+                objects[i] = data.FileID;
+                objects[i + 1] = data.FileName;
+                objects[i + 2] = data.Mail;
+                i += 3;
             }
-            return new Message(data: new Object[] { list });
+            return new Message(data: objects, applicationToken: "server",
+                               info: "", operation: Operations.GetCompleted,
+                               status: Status.Suceeded, userToken: "");
         }
 
 
@@ -130,35 +146,42 @@ namespace GeneratorService
             var result = new StringBuilder();
 
             for (int c = 0; c < text.Length; c++)
+            {
                 result.Append((char)((uint)text[c] ^ (uint)key[c % key.Length]));
-
+            }
             return result.ToString();
         }
 
         private Message Decode(Message msg)
         {
+            var database = new DataGenConnexion();
             var client = new GeneratorClient("GeneratorPort");
             int count = 0;
+            int counter = database.DataSets.Where(x => x.FileID == msg.Info).Count();
 
-            if (!WorkService.filesAnalyzed.Contains(msg.Info))
+            if (!WorkService.filesAnalyzed.Contains(msg.Info) && (counter == 0))
             {
                 WorkService.filesAnalyzed.Add(msg.Info, new Tuple<bool, Message>(true, null));
 
-                Parallel.For(0, 1, (int x, ParallelLoopState loopState) =>
+                Parallel.For(64800, 64900, (int x, ParallelLoopState loopState) =>
                     {
                         object[] finalData;
                         if (((Tuple<bool, Message>)WorkService.filesAnalyzed[msg.Info]).Item1)
                         {
-                            var key = 64897.ToString();
+                            //var key = 64897.ToString();
+
+                            var key = x.ToString();
 
                             byte[] toto = Encoding.UTF8.GetBytes(EncryptOrDecrypt((String)msg.Data[0], key));
                             finalData = new Object[msg.Data.Length];
                             Array.Copy(msg.Data, finalData, msg.Data.Length);
                             finalData[0] = toto;
 
-                            Console.WriteLine(Encoding.UTF8.GetString(toto));
+                            //Console.WriteLine(Encoding.UTF8.GetString(toto));
 
                             Interlocked.Increment(ref count);
+                            Console.Write(" ");
+                            Console.Write("\r {0}/100", count);
 
                             client.ServiceOperation(msg.ApplicationToken,
                                                     finalData,
@@ -173,7 +196,13 @@ namespace GeneratorService
                         }
                     });
             }
-
+            else
+            {
+                var data = database.DataSets.FirstOrDefault(x => x.FileID == msg.Info);
+                var mesg = new Message(msg.ApplicationToken, new Object[] { data.DecodedText }, msg.Info, msg.Operation, Status.Suceeded, msg.UserToken);
+                WorkService.filesAnalyzed.Add(msg.Info, new Tuple<bool, Message>(true, mesg));
+            }
+            Console.WriteLine("\n Finished Loop");
             return ((Tuple<bool, Message>)WorkService.filesAnalyzed[msg.Info]).Item2;
         }
 

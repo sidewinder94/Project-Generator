@@ -9,9 +9,10 @@ using System.Windows.Controls;
 
 namespace GeneratorClient
 {
-
+    [CallbackBehavior(UseSynchronizationContext = false)]
     class Callback : IClientCallback
     {
+
         public event EventHandler finishedEvent;
         public void NotifyClients()
         {
@@ -25,29 +26,45 @@ namespace GeneratorClient
     {
         private WorkServiceClient client;
         private MainWindow mainWindow;
-
+        private Utils.Timer resetConnectionTimer = new Utils.Timer(new TimeSpan(0, 0, 30));
         #region callback connection
         private DuplexChannelFactory<ISubService> channel;
         private ISubService service;
         #endregion
 
+
+        ~Main()
+        {
+            resetConnectionTimer.Stop();
+            client.Close();
+        }
         public Main()
         {
             Callback callback = new Callback();
             callback.finishedEvent += callback_finishedEvent;
             channel = new DuplexChannelFactory<ISubService>(callback, "callBackEndpoint");
             service = channel.CreateChannel();
+            resetConnectionTimer.CountdownEnd += resetConnectionTimer_CountdownEnd;
+            resetConnectionTimer.Start();
+
             InitializeComponent();
+        }
+
+        void resetConnectionTimer_CountdownEnd(object sender, EventArgs e)
+        {
+            if (channel.State == CommunicationState.Faulted)
+            {
+                channel.Abort();
+                service = channel.CreateChannel();
+                messageReceived();
+            }
+            resetConnectionTimer.Restart();
         }
 
         void callback_finishedEvent(object sender, EventArgs e)
         {
+            MessageBox.Show("Fichier décodé");
             messageReceived();
-        }
-
-        ~Main()
-        {
-            client.Close();
         }
 
         public Main(MainWindow mainWindow)
@@ -63,6 +80,7 @@ namespace GeneratorClient
             }
             this.mainWindow = mainWindow;
             service.SubscribeClient(mainWindow.userToken);
+            messageReceived();
         }
 
         void client_ServiceOperationCompleted(object sender, ServiceOperationCompletedEventArgs e)
@@ -75,21 +93,27 @@ namespace GeneratorClient
 
         void messageReceived()
         {
-            MessageBox.Show("Fichier décodé");
+            WorkServiceClient client = new WorkServiceClient("NetTcpBinding_IWorkService");
+            var mesg = new Message();
+            mesg.Operation = Operations.GetCompleted;
+            mesg.ApplicationToken = this.mainWindow.applicationToken;
+            mesg.UserToken = this.mainWindow.applicationToken;
+            var data = (object[])client.ServiceOperation(mesg).Data;
+            client.Close();
             Action action = delegate()
             {
-                WorkServiceClient client = new WorkServiceClient();
-                var mesg = new Message();
-                mesg.Operation = Operations.GetCompleted;
-                mesg.ApplicationToken = this.mainWindow.applicationToken;
-                mesg.UserToken = this.mainWindow.applicationToken;
-                var data = (List<Tuple<int, string, string>>)client.ServiceOperation(mesg).Data[0];
                 this.convertedItems.Children.Clear();
-                foreach (Tuple<int, string, string> tuple in data)
+                for (int i = 0; i < data.Length; i += 3)
                 {
-                    this.convertedItems.Children.Add(new ConvertedItem(tuple.Item1, tuple.Item2, tuple.Item3, this.mainWindow));
+                    string fileID = (string)data[i];
+                    string fileName = (string)data[i + 1];
+                    string mailFound = (string)data[i + 2];
+                    ConvertedItem item = new ConvertedItem(fileID, fileName, mailFound, this.mainWindow);
+                    Thickness margin = new Thickness(0, 10, 5, 0);
+                    item.Margin = margin;
+                    this.convertedItems.Children.Add(item);
                 }
-                client.Close();
+
             };
             Dispatcher.Invoke(action);
         }

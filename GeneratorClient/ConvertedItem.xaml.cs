@@ -25,19 +25,19 @@ namespace GeneratorClient
         public String MailFound
         {
             get { return _mailFound; }
-            set { _mailFound = value; }
+            set { _mailFound = value.TrimEnd('|'); }
         }
 
         private String decodedText;
         private byte[] TrustLevelPdf;
 
-        private int FileID;
+        private string FileID;
         private MainWindow mainWindow;
-        public ConvertedItem(int FileID, String fileName, String mailFound, MainWindow main)
+        public ConvertedItem(string FileID, String fileName, String mailFound, MainWindow main)
         {
             this.DataContext = this;
-            this._fileName = fileName;
-            this._mailFound = mailFound;
+            this.FileName = fileName;
+            this.MailFound = mailFound;
             this.FileID = FileID;
             this.mainWindow = main;
             WorkServiceClient client = new WorkServiceClient();
@@ -45,6 +45,7 @@ namespace GeneratorClient
             msg.ApplicationToken = main.applicationToken;
             msg.UserToken = main.userToken;
             msg.Operation = Operations.GetDecrypted;
+            msg.Data = new Object[] { FileID };
             msg = client.ServiceOperation(msg);
             this.decodedText = (String)msg.Data[0];
             this.TrustLevelPdf = (byte[])msg.Data[1];
