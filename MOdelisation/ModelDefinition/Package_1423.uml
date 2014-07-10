@@ -1715,6 +1715,13 @@
               LastKnownName="Utils"
               LastKnownLocation="Package_1423.uml" />
           </dependency>
+          <dependency
+            Id="653bd80a-4873-4072-a30f-35a6def84e9c">
+            <classMoniker
+              Id="21baa593-24db-4fc1-aa3c-f7a93ccb110e"
+              LastKnownName="WorkServiceClient"
+              LastKnownLocation="Package8_1423.uml" />
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
@@ -3671,6 +3678,13 @@
               Id="02f54e61-631c-4cb7-825f-2dff4b23e72d"
               LastKnownName="ConvertedItem"
               LastKnownLocation="Package_1423.uml" />
+          </dependency>
+          <dependency
+            Id="acd56988-a725-42d9-80c6-39270490071d">
+            <classMoniker
+              Id="21baa593-24db-4fc1-aa3c-f7a93ccb110e"
+              LastKnownName="WorkServiceClient"
+              LastKnownLocation="Package8_1423.uml" />
           </dependency>
         </suppliersInternal>
         <generalsInternal>

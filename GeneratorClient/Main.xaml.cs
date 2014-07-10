@@ -97,7 +97,7 @@ namespace GeneratorClient
             var mesg = new Message();
             mesg.Operation = Operations.GetCompleted;
             mesg.ApplicationToken = this.mainWindow.applicationToken;
-            mesg.UserToken = this.mainWindow.applicationToken;
+            mesg.UserToken = this.mainWindow.userToken;
             var data = (object[])client.ServiceOperation(mesg).Data;
             client.Close();
             Action action = delegate()

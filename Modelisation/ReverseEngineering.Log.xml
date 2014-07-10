@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/ReverseEngineeringLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Génération de code/Journal de transformation de texte">
+  <MessageClass Name="Message" Label="Message" Option="Afficher les messages d'information" />
+  <MessageClass Name="Warning" Label="Avertissement" Option="Afficher les avertissements" />
+  <MessageClass Name="Error" Label="Erreur" Option="Afficher les erreurs" />
+  <MessageClass Name="Property" Label="Propriété" Option="Afficher les métadonnées" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Afficher les messages de diagnostic" />
+  <Message Timestamp="2014-07-08T14:29:33" Importance="High" Text="Processus d'ingénierie à rebours démarré." />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Boolean' -  (PrimitiveType)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Integer' -  (PrimitiveType)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient' -  (Package)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Medium" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow' -  (Class)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::_contentLoaded' -  (Property)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::applicationToken' -  (Property)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::InitializeComponent' -  (Operation)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::loggedOn' -  (Operation)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::MainWindow' -  (Operation)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::System‎.Windows‎.Markup‎.IComponentConnector‎.Connect' -  (Operation)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::System‎.Windows‎.Markup‎.IComponentConnector‎.Connect::connectionId' -  (Parameter)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::System‎.Windows‎.Markup‎.IComponentConnector‎.Connect::target' -  (Parameter)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::userToken' -  (Property)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::Window_Closing' -  (Operation)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::Window_Closing::e' -  (Parameter)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::GeneratorClient::MainWindow::Window_Closing::sender' -  (Parameter)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System' -  (Package)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::ComponentModel' -  (Package)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::ComponentModel::CancelEventArgs' -  (Class)   (ingénierie à rebours partielle : définition non mise à jour) " />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::Object' -  (Class)   (ingénierie à rebours partielle : définition non mise à jour) " />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::Windows' -  (Package)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::Windows::Markup' -  (Package)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::Windows::Markup::IComponentConnector' -  (Interface)   (ingénierie à rebours partielle : définition non mise à jour) " />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'Modelisation::System::Windows::Window' -  (Class)   (ingénierie à rebours partielle : définition non mise à jour) " />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="Élément ayant fait l'objet d'une ingénierie à rebours dans le modèle UML : 'String' -  (PrimitiveType)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="La relation a fait l'objet d'une ingénierie à rebours dans le modèle UML : Modelisation::GeneratorClient::MainWindow en Modelisation::System::Windows::Markup::IComponentConnector (InterfaceRealization)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="La relation a fait l'objet d'une ingénierie à rebours dans le modèle UML : Modelisation::GeneratorClient::MainWindow en Modelisation::System::Windows::Window (Generalization)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="Diagnostic" Text="La relation a fait l'objet d'une ingénierie à rebours dans le modèle UML : Modelisation::System::ComponentModel::CancelEventArgs en Modelisation::System::EventArgs (Generalization)" />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="High" Text="(1) type(s) ayant fait l'objet d'une ingénierie à rebours complète." />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="High" Text="Ingénierie à rebours partielle effectuée sur (4) type(s). Ces types n'ont pas été inclus dans la sélection d'origine, par conséquent, leurs définitions n'ont pas fait l'objet d'une ingénierie à rebours complète. Cette opération superficielle ne fait que s'assurer de l'existence de ces types dans le modèle UML, puisqu'ils sont nécessaires à la description complète d'autres éléments." />
+  <Message Timestamp="2014-07-08T14:29:36" Importance="High" Text="L'opération d'ingénierie à rebours s'est terminée avec (0) erreur(s) et (0) avertissement(s)." />
+</Log>

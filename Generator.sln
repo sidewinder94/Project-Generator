@@ -16,7 +16,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorServer", "Generato
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeneratorSubService", "GeneratorSubService\GeneratorSubService.csproj", "{4D3FC325-B4A2-4783-B803-27082ABC357B}"
 EndProject
-Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modelisation", "MOdelisation\Modelisation.modelproj", "{73E3FC4B-04EE-43D1-AFDE-C1F8D967AEB2}"
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modelisation", "Modelisation\Modelisation.modelproj", "{73E3FC4B-04EE-43D1-AFDE-C1F8D967AEB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -29,13 +29,22 @@ namespace GeneratorClient
         {
             WorkServiceClient client = new WorkServiceClient("NetTcpBinding_IWorkService");
             Message msg = new Message();
-            msg.ApplicationToken = Guid.NewGuid().ToString();
+            msg.ApplicationToken = ((MainWindow)this.Parent).applicationToken;
             msg.Operation = Operations.Authenticate;
             msg.Status = Status.Sent;
+            msg.Data = new Object[] { this.Username, this.passwordBox.Password };
             msg = client.ServiceOperation(msg);
             ((MainWindow)this.Parent).userToken = msg.UserToken;
-            ((MainWindow)this.Parent).applicationToken = msg.ApplicationToken;
-            ((MainWindow)this.Parent).loggedOn();
+
+            if (msg.UserToken == null)
+            {
+                MessageBox.Show(msg.Info);
+            }
+            else
+            {
+                ((MainWindow)this.Parent).loggedOn();
+
+            }
             client.Close();
         }
     }

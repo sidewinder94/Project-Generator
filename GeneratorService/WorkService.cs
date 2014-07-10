@@ -30,7 +30,7 @@ namespace GeneratorService
         #endregion
 
         private static readonly Hashtable filesAnalyzed = new Hashtable();
-        private List<Guid> authenticatedClients = new List<Guid>();
+        private static readonly List<Guid> authenticatedClients = new List<Guid>();
 
         public WorkService()
         {
@@ -50,14 +50,14 @@ namespace GeneratorService
                 case Operations.Authenticate:
                     return Authenticate(msg);
                 case Operations.Decode:
-                    return Decode(msg);
+                    return Authenticate(Decode, msg);
                 case Operations.Finish:
                     Finish(msg);
                     break;
                 case Operations.GetCompleted:
-                    return GetCompleted();
+                    return Authenticate(GetCompleted, msg);
                 case Operations.GetDecrypted:
-                    return GetDecrypted(msg);
+                    return Authenticate(GetDecrypted, msg);
                 default:
                     throw new NotImplementedException();
                 //break;
@@ -116,13 +116,18 @@ namespace GeneratorService
             }
             else
             {
-                return new Message(operation: Operations.GetDecrypted, status: Status.Failed, info: "No such file", data: new Object[0], applicationToken: msg.ApplicationToken, userToken: msg.UserToken);
+                return new Message(operation: Operations.GetDecrypted,
+                                   status: Status.Failed,
+                                   info: "No such file",
+                                   data: new Object[0],
+                                   applicationToken: msg.ApplicationToken,
+                                   userToken: msg.UserToken);
             }
 
         }
 
 
-        private Message GetCompleted()
+        private Message GetCompleted(Message msg)
         {
             DataGenConnexion database = new DataGenConnexion();
             var objects = new Object[database.DataSets.Count() * 3];
@@ -208,16 +213,56 @@ namespace GeneratorService
 
         private Message Authenticate(Message msg)
         {
-            Console.WriteLine("{0} asked for Authentication", msg.ApplicationToken);
+            var database = new DataGenConnexion();
+            String login = msg.Data[0] as String;
+            String password = msg.Data[1] as String;
+            Console.WriteLine("{0} asked for Authentication as {1}", msg.ApplicationToken, login);
             Guid generated = Guid.NewGuid();
             while (authenticatedClients.Contains(generated) || generated == Guid.Empty)
             {
                 generated = Guid.NewGuid();
             }
-            msg.UserToken = generated.ToString();
-            msg.Status = Status.Suceeded;
-            Console.WriteLine("{0} got {1} as userToken", msg.ApplicationToken, msg.UserToken);
+            UserSet user = database.UserSets.FirstOrDefault(x => x.Login == login && x.Password == password);
+            if (user != null)
+            {
+                msg.UserToken = generated.ToString();
+                msg.Status = Status.Suceeded;
+                WorkService.authenticatedClients.Add(generated);
+                Console.WriteLine("{0} authenticated and got {1} as userToken", msg.ApplicationToken, msg.UserToken);
+            }
+            else
+            {
+                msg.Status = Status.Failed;
+                msg.Info = "User not found";
+                Console.WriteLine("{0} failed to authenticate", msg.ApplicationToken, msg.UserToken);
+            }
             return msg;
+        }
+
+        /// <summary>
+        /// Check if client is authenticated
+        /// </summary>
+        /// <param name="func"></param>
+        /// <param name="msg"></param>
+        /// <returns></returns>
+        private Message Authenticate(Func<Message, Message> func, Message msg)
+        {
+            if (!WorkService.authenticatedClients.Contains(Guid.Parse(msg.UserToken)))
+            {
+                Console.WriteLine("Client {0} tried to call {1} without being authenticated",
+                                  msg.ApplicationToken,
+                                  func.Method.ToString());
+                return new Message(operation: Operations.GetDecrypted,
+                      status: Status.Failed,
+                      info: "User not authenticated",
+                      data: new Object[0],
+                      applicationToken: msg.ApplicationToken,
+                      userToken: msg.UserToken);
+            }
+            else
+            {
+                return func(msg);
+            }
         }
     }
 }

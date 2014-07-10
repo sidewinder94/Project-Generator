@@ -1,25 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="184fb7e3-4d14-4d83-bba9-2c95ee69805e" name="Diagramme de classe" linkedPackageId="5e8065e1-10fe-42e1-b865-c89e078fe2c8" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="32e23cf5-dde8-4496-a55e-17ba8c99952c">
-      <profileInstance Id="b931f859-a603-403b-9ed5-67b5ccfabac0" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="28d64c89-7c54-4ba5-80ed-3ef902b2f873">
-      <profileInstance Id="eb564457-d360-411c-b54b-91c860aa9814" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="92e88d23-fb52-492e-9073-ebaf546d5bf4">
-      <profileInstance Id="1380c5b3-2dc9-4fcc-bc64-f47235e0c6b2" name="CSharpProfile">
-        <elementDefinition Id="bea9ba9f-8b50-4757-9a46-d54afb4cf13a" />
-      </profileInstance>
-      <elementDefinition Id="25cdbb93-4a5d-4cac-8df5-b979ee80c34d" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="a6855a7e-0a8e-4c26-a716-9c9a28ac605d" name="GeneratorClient" visibility="Private">
@@ -2775,6 +2755,10 @@
                   <classMoniker Id="38111cba-bee8-4e3d-bef4-9a8da2edc606" LastKnownName="ConvertedItem" />
                   <elementDefinition Id="1dc0fb52-73f4-4a5a-92b5-171f2ff9b2ea" />
                 </dependency>
+                <dependency Id="0aaf6af2-8bfa-4a00-bd4c-2522a1255063">
+                  <classMoniker Id="aadd1efd-5d10-4bcf-bb61-04fdfa1f4929" LastKnownName="WorkServiceClient" />
+                  <elementDefinition Id="acd56988-a725-42d9-80c6-39270490071d" />
+                </dependency>
               </suppliersInternal>
               <ownedAttributesInternal>
                 <property Id="c518f87b-e30b-4ce3-bcfd-812314a2d367" name="Username" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -3295,6 +3279,10 @@
                 <dependency Id="7f7e61dd-7407-46a1-8afb-fd3157503077">
                   <classMoniker Id="639aa6e7-7027-4935-baf0-7ba329427ca4" LastKnownName="Utils" />
                   <elementDefinition Id="d6f3e46f-0fe7-4c20-9924-e461dfe37c76" />
+                </dependency>
+                <dependency Id="d39924a4-5da7-464e-81d8-89937033c729">
+                  <classMoniker Id="aadd1efd-5d10-4bcf-bb61-04fdfa1f4929" LastKnownName="WorkServiceClient" />
+                  <elementDefinition Id="653bd80a-4873-4072-a30f-35a6def84e9c" />
                 </dependency>
               </suppliersInternal>
               <ownedAttributesInternal>
@@ -4384,8 +4372,1483 @@
         <elementDefinition Id="52479a18-d93e-4b6a-b527-31e882b6f0eb" />
       </referencedType>
     </packageHasNamedElement>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="d1674e44-ce39-4cf0-a1f5-5bf169e90664" name="GeneratorServiceContracts" visibility="Private">
+        <referencesInternal>
+          <reference Id="4d454ef7-adff-4d90-a9d8-b48b728013ee" handle="viewcode://./CodeSchema_Namespace?Namespace%3DGeneratorClient.GeneratorServiceContracts" tag="ViewCode">
+            <elementDefinition Id="0a8c98f5-b3ec-4136-9696-664db6f25d7e" />
+          </reference>
+        </referencesInternal>
+        <elementDefinition Id="867f17bc-25f9-43ba-8c97-c72c434d1935" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="aadd1efd-5d10-4bcf-bb61-04fdfa1f4929" name="WorkServiceClient" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <referencesInternal>
+                <reference Id="4ea2584e-448c-4165-abb2-0c8417a5ac31" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient" tag="ViewCode">
+                  <elementDefinition Id="d83d9703-d7a2-4ce2-995c-8628ff7da795" />
+                </reference>
+              </referencesInternal>
+              <appliedStereotypesInternal>
+                <stereotypeInstance Id="4b303da0-fe95-491f-8057-d0f0feee94e3" name="class" profile="CSharpProfile">
+                  <elementDefinition Id="3ab58a35-2945-46e6-abf3-a7639a602c72" />
+                  <propertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="07fbe780-9b89-4144-844a-e4a57b0dca4f">
+                      <propertyInstance Id="c6a81a3b-3523-4231-b29c-03ebc5374897" name="ClrAttributes">
+                        <elementDefinition Id="62f83002-1e55-440c-a0bf-3fadd157025b" />
+                      </propertyInstance>
+                      <elementDefinition Id="dc8fb885-1078-443a-b8eb-e6da522ac420" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="94b090a9-063c-4771-a6d3-2a901e325e55">
+                      <propertyInstance Id="dbda6605-ca5d-4a29-b98f-142d0b653446" name="IsPartial" value="false">
+                        <elementDefinition Id="86f96ab4-cd80-4e2d-86f1-f4fda0dd976f" />
+                      </propertyInstance>
+                      <elementDefinition Id="5d09ea4a-077f-45c6-bb49-0c51b7d86283" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="cc305ff6-8237-404d-9228-7785c186511a">
+                      <propertyInstance Id="0f1dc649-1779-454b-b73a-97aa601db352" name="IsStatic" value="False">
+                        <elementDefinition Id="0ea6919f-1aa8-4623-b47c-61779886bbaf" />
+                      </propertyInstance>
+                      <elementDefinition Id="9ba0c786-675d-4fc5-9a0a-5a3ce63a9e2f" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="808a0dac-246f-4c07-94eb-e8a4e4bd0581">
+                      <propertyInstance Id="d0b398e0-fc72-476d-a2ad-2858857946b0" name="IsUnsafe" value="false">
+                        <elementDefinition Id="0c740a39-bd10-4393-8a27-9c842561cd53" />
+                      </propertyInstance>
+                      <elementDefinition Id="b081c201-66e5-4e3c-bab9-53620d387cf8" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="03bc47a9-af16-48ae-bab5-bf01246710a6">
+                      <propertyInstance Id="2c7c6c9c-cb14-4e4b-95a2-ae57676b0510" name="PackageVisibility" value="internal">
+                        <elementDefinition Id="b47f6707-b6d1-40ba-97a8-456fb2c993f8" />
+                      </propertyInstance>
+                      <elementDefinition Id="2c7904fc-e659-4f63-a6d1-a95a92befb6d" />
+                    </stereotypeInstanceHasPropertyInstances>
+                  </propertyInstances>
+                </stereotypeInstance>
+              </appliedStereotypesInternal>
+              <elementDefinition Id="21baa593-24db-4fc1-aa3c-f7a93ccb110e" />
+              <suppliersInternal>
+                <dependency Id="6324e988-c081-4a37-883f-e409d0c4842f">
+                  <enumerationMoniker Id="4e93ca2d-1d8f-49cf-ad54-ee13f85cf355" LastKnownName="Operations" />
+                  <elementDefinition Id="6688fd9d-f466-419b-b2ea-993d513d13e6" />
+                </dependency>
+                <dependency Id="8926a8b1-957b-4cfc-8b11-e96bc197a5a0">
+                  <enumerationMoniker Id="de50f01f-8554-4e7d-ab7b-764c0a3506c9" LastKnownName="Status" />
+                  <elementDefinition Id="a2d6b57f-8e3d-4e8d-bdbb-f7c148c36908" />
+                </dependency>
+              </suppliersInternal>
+              <ownedAttributesInternal>
+                <property Id="ba4477a9-0670-4867-bffd-a7b3aca7bd57" name="onBeginServiceOperationDelegate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <referencesInternal>
+                    <reference Id="54ceeeec-1961-40fd-bfe2-89f9ddb3878e" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3DonBeginServiceOperationDelegate" tag="ViewCode">
+                      <elementDefinition Id="1381db52-4c48-4aec-8010-01ad546772cd" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="12283078-b1df-4bde-af55-6330beab520e" name="field" profile="CSharpProfile">
+                      <elementDefinition Id="ddf77baa-6fd2-433d-89bb-c949ab0d8a83" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f7f7ee23-22e6-4816-ab48-26021d32570d">
+                          <propertyInstance Id="b992881f-d7d5-4f22-bdf1-cab22a9e3f0a" name="ClrAttributes">
+                            <elementDefinition Id="31c1e58c-e785-4022-b26c-ec671b5f4d76" />
+                          </propertyInstance>
+                          <elementDefinition Id="1815b067-8f58-4538-a52a-40f33561ff92" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="8b9fa3cb-98a5-49d7-8719-4ca73494ea00">
+                          <propertyInstance Id="4b416638-60ce-4396-84d3-b485a57147a1" name="IsConst" value="false">
+                            <elementDefinition Id="34fd683b-9ddf-4d49-a67f-d743c6a6620d" />
+                          </propertyInstance>
+                          <elementDefinition Id="5654b92f-9f8b-4135-bf3c-8a7b942de81c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="42b558c4-a229-4bbf-adab-39e5d22f50e7">
+                          <propertyInstance Id="7ca82cce-79ef-4f46-9611-9d4b89a5b030" name="IsNullable" value="false">
+                            <elementDefinition Id="d56d356a-ed24-463b-9b5f-4dff8b269d6b" />
+                          </propertyInstance>
+                          <elementDefinition Id="d39baa42-b29a-4cea-bd7b-63e06494396f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="03fbe3e1-a8eb-431e-97ef-b33e8c8c6be2">
+                          <propertyInstance Id="a59d81ab-020e-4320-9f43-bb480b291a2a" name="IsVolatile" value="false">
+                            <elementDefinition Id="3fcb918c-fdd4-49ae-97b2-ec7b900dca68" />
+                          </propertyInstance>
+                          <elementDefinition Id="a94eb4a7-5ff2-4ad4-8e1b-7a0df61a1e8e" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="cee3a93b-c18a-43f6-90dc-358088282b96">
+                          <propertyInstance Id="7a74f44e-2ac3-4624-be9d-7264b01da44e" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="fb524e29-512a-4c26-b38f-1906661f55ef" />
+                          </propertyInstance>
+                          <elementDefinition Id="7c146f5a-501b-46b5-b46a-54e034d803fb" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="58f1d183-56c7-4505-ae4b-1234808c934a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="de8b218b-f161-4ca2-988b-5549ce0bc88a" LastKnownName="BeginOperationDelegate" />
+                  </type_NamedElement>
+                </property>
+                <property Id="e4fe9a5d-a181-4585-9629-edd64906ebca" name="onEndServiceOperationDelegate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <referencesInternal>
+                    <reference Id="d0825e40-9ecd-4b84-b7e5-698262841656" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3DonEndServiceOperationDelegate" tag="ViewCode">
+                      <elementDefinition Id="162f4b64-3728-4ed8-8e3d-a5aa9ab645e6" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="57a1e78c-c9cc-46ef-a217-67d0d0c9ad14" name="field" profile="CSharpProfile">
+                      <elementDefinition Id="414c848d-8656-4f92-9bf8-d3a9333797ee" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="1295150c-af95-4755-89d2-2d757fba7a3f">
+                          <propertyInstance Id="95716750-7301-4b92-b447-22ddd9e9f9d5" name="ClrAttributes">
+                            <elementDefinition Id="fb4b0fe6-e391-4045-aa4f-d74a1f22ba86" />
+                          </propertyInstance>
+                          <elementDefinition Id="bc51b7f9-73ab-4854-b086-dae00a90a2c8" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="77ffa725-290a-4ffa-a5a4-c4896b202e79">
+                          <propertyInstance Id="4a1a46dd-07bb-4499-beea-81c2113e751b" name="IsConst" value="false">
+                            <elementDefinition Id="560893b9-e5ba-4ea0-b329-67b6756fc516" />
+                          </propertyInstance>
+                          <elementDefinition Id="8ec7dc29-7af0-42c9-9f31-a559f0af2dbc" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="36832938-f563-41a6-b06e-77b2c92ee81d">
+                          <propertyInstance Id="c291a148-5c15-438b-b244-ea0b7fe75662" name="IsNullable" value="false">
+                            <elementDefinition Id="6675a6cf-6d77-4c66-9816-da1651354c20" />
+                          </propertyInstance>
+                          <elementDefinition Id="f866278c-40a9-4c8e-a7f9-9cbcfb232f15" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="a76eb8d6-0a4c-43b2-aa6a-fab89eb1af75">
+                          <propertyInstance Id="55ef6550-6a56-4551-8e7c-cb0310ea9feb" name="IsVolatile" value="false">
+                            <elementDefinition Id="c1214b92-70bd-4502-9243-1bf0c691b438" />
+                          </propertyInstance>
+                          <elementDefinition Id="44e37cbe-c654-4a06-a04e-dc96bc9b26f1" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="dfae5f82-19c5-4e87-b90e-7e35828f090d">
+                          <propertyInstance Id="5008d099-04d2-4333-8205-bcb3a1e30d1d" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="85d53282-f716-4892-b055-13d6b862569b" />
+                          </propertyInstance>
+                          <elementDefinition Id="1b92e590-f58f-4581-88d3-b2fc89a4d4f1" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="a4677798-42bc-4a62-82d7-a24a3b47e840" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f46954be-c223-4721-89a7-d636897e9509" LastKnownName="EndOperationDelegate" />
+                  </type_NamedElement>
+                </property>
+                <property Id="db44d9d5-a6a0-431b-909b-9ccd1941db94" name="onServiceOperationCompletedDelegate" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <referencesInternal>
+                    <reference Id="c29ca41c-0cce-4b3d-9026-db22e342299f" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3DonServiceOperationCompletedDelegate" tag="ViewCode">
+                      <elementDefinition Id="6faffbfe-c277-4ef9-918d-e9db1a1667ff" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="bd2e71ff-e235-4cba-b8c2-cfa759b7d2c7" name="field" profile="CSharpProfile">
+                      <elementDefinition Id="d6726a7c-2be5-4447-a0fe-5dde3125a99c" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b816b287-18ca-4b39-80cb-c15a592acd2f">
+                          <propertyInstance Id="66c0c559-1f40-40cc-97e7-5acb3b83af0e" name="ClrAttributes">
+                            <elementDefinition Id="ce0514d7-cbe1-40ea-979b-7c92af343622" />
+                          </propertyInstance>
+                          <elementDefinition Id="7d6adb2f-606c-4f4c-a5ec-c55ff03aedb9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="58bd8687-2578-454c-bb58-d1c2c31826af">
+                          <propertyInstance Id="d6b738b9-833e-4e7b-afeb-293b5cabab0b" name="IsConst" value="false">
+                            <elementDefinition Id="5ea47d3d-d49c-4546-804a-f28cceb9c23e" />
+                          </propertyInstance>
+                          <elementDefinition Id="dc636079-996e-4ac8-80c0-aa030af801e8" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="a9d517bc-0ace-43cd-85eb-fa96f22fa604">
+                          <propertyInstance Id="694504c1-7e50-4fcf-a305-8b0362847661" name="IsNullable" value="false">
+                            <elementDefinition Id="9735695b-230f-447c-84d4-855273922f59" />
+                          </propertyInstance>
+                          <elementDefinition Id="b9c8b744-5af2-47da-aff5-72082e46c00d" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="412e982d-8e6b-4fda-93cf-6f00fb8e8983">
+                          <propertyInstance Id="ad590c07-abd0-4faf-ad32-f955f50022c7" name="IsVolatile" value="false">
+                            <elementDefinition Id="fa8b0cf8-9214-4e3c-a760-66f639b7741a" />
+                          </propertyInstance>
+                          <elementDefinition Id="9b839180-5f8e-4283-88e0-205f2ed15f7a" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c6af6777-271e-4d5d-8cce-30b098f24d98">
+                          <propertyInstance Id="edf03d94-defa-4278-8074-1e5057c4342b" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="1d3c4910-97d5-4153-8d32-52de82af9c3d" />
+                          </propertyInstance>
+                          <elementDefinition Id="0fdc0f2b-aa67-40aa-9daa-e0fdb121cc53" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="5b734512-b3ed-4cc1-be66-820a88b21bbe" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3a94772b-a496-408c-a8f3-afc1f4444d0e" LastKnownName="SendOrPostCallback" />
+                  </type_NamedElement>
+                </property>
+                <property Id="43d8f6a1-7eef-44a4-ae01-1a403857da0a" name="ServiceOperationCompleted" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <referencesInternal>
+                    <reference Id="35918d90-3df5-4f34-835f-3c9d0b141a6b" handle="viewcode://./CodeSchema_Event?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3DServiceOperationCompleted" tag="ViewCode">
+                      <elementDefinition Id="8214b140-a2ac-450e-a7d0-3a681b3a1af7" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="73e0c107-10f4-47e3-9839-ab13063e0677" name="event" profile="CSharpProfile">
+                      <elementDefinition Id="8bc3fad5-bab8-4e0a-ae20-7fd4abf7ecaf" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="73b2b65f-a9e7-4016-87ca-3c3d474c003f">
+                          <propertyInstance Id="0ef8a000-5475-4dcc-a630-23b188f56c30" name="Add" value="false">
+                            <elementDefinition Id="47b69bb0-e08b-47bd-8217-5ae0834f3ff2" />
+                          </propertyInstance>
+                          <elementDefinition Id="8fcc5036-29fe-4b0a-b195-58168a9b14c0" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ef5b8940-b63d-4456-b378-79bfa0ac9895">
+                          <propertyInstance Id="d88df925-9a43-4d2b-8732-194597c74dc7" name="ClrAttributes">
+                            <elementDefinition Id="36e4dd47-702f-4521-8c27-30df02546756" />
+                          </propertyInstance>
+                          <elementDefinition Id="b294d302-4388-4d3b-829e-c0bafed031e4" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c349aea9-fe32-47d3-8b4c-26c440bb18e4">
+                          <propertyInstance Id="814152ce-03de-4442-b72d-1dba35f0127c" name="IsUnsafe" value="false">
+                            <elementDefinition Id="a69bdb78-6ea7-4253-b662-6dae33de496d" />
+                          </propertyInstance>
+                          <elementDefinition Id="cb99faf2-b4b8-44eb-a289-e09b3ba5d3fa" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c7619424-bcb7-45af-8ef1-6c81226afbf1">
+                          <propertyInstance Id="eb7ddb36-5a28-449f-a989-b83c99a1a5f1" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="70eef59b-d5d5-4c52-997b-8d4d89d994f9" />
+                          </propertyInstance>
+                          <elementDefinition Id="609b1d8c-8fde-4b41-813f-36e6e4bb6942" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="866b6ab7-8b11-4979-a17f-c47370aec762">
+                          <propertyInstance Id="8f0b5274-4a9d-435e-8d04-f678874bbbb3" name="Remove" value="false">
+                            <elementDefinition Id="bd9f4fd6-432c-4015-845c-824c3ec5d6ce" />
+                          </propertyInstance>
+                          <elementDefinition Id="3cbb6c57-06c8-4555-8268-23ceacb451e9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="3b1b963e-600f-4d1c-89e8-8fe61ebbd462" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b3523d98-37a7-4134-a8a7-56ee43d39def" LastKnownName="EventHandler&lt;ServiceOperationCompletedEventArgs‎&gt;" />
+                  </type_NamedElement>
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="b091d072-5086-4151-9fad-5664e621fd55" name="WorkServiceClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="a91d6f55-d97b-42ff-bdb9-bdb98c8d2b2a" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D.ctor" tag="ViewCode">
+                      <elementDefinition Id="b2fca480-62e9-4ca0-bb47-c433e5dba849" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="00ed138e-47f7-44f0-a232-8bfe72fc7f42" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="2f5ad073-0bd8-45c0-8c20-6bd6ca72a0eb" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="08fe4e39-142e-4bff-ae4c-bb6cd3e2fc1c">
+                          <propertyInstance Id="94410a2e-4eb6-46a6-b316-5217687fb24f" name="ClrAttributes">
+                            <elementDefinition Id="53cb21bf-17e3-4d2f-b081-d076c91a6b41" />
+                          </propertyInstance>
+                          <elementDefinition Id="ec1af29c-9fa3-4049-b15d-6c4c44773374" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="7c7811a2-92f1-4a07-b130-b1bddeeeb7e7">
+                          <propertyInstance Id="2949605e-5665-4dc1-bbc1-6f9b79157574" name="IsPartial" value="false">
+                            <elementDefinition Id="acde3a39-424c-42aa-8c06-5bbb9b4ee143" />
+                          </propertyInstance>
+                          <elementDefinition Id="d26366f1-9e8f-4167-b3c5-11cc20f54ddd" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c17d95e6-bb92-4fb8-a2f1-f325734e1aa4">
+                          <propertyInstance Id="655d9881-243f-4a43-bb0e-7a75597c812f" name="IsUnsafe" value="false">
+                            <elementDefinition Id="e8f20ecd-79e2-4780-b977-167783043f9f" />
+                          </propertyInstance>
+                          <elementDefinition Id="eb50d7e4-bd08-44ad-a736-c24ee6102bdb" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="622a07d6-e631-4c39-8a60-7befcfd07e9b">
+                          <propertyInstance Id="036e93a7-915e-421b-9be2-6957c5f38e41" name="Inheritance" value="none">
+                            <elementDefinition Id="991e7bfc-ffe6-4236-9c68-abaa6a748109" />
+                          </propertyInstance>
+                          <elementDefinition Id="9d68898d-df45-4acf-b784-ec33f2c6f27c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="1557375e-af34-4c4d-a8f2-c29629ec09f2">
+                          <propertyInstance Id="89834ccb-e618-4a21-98a6-e378cdf59331" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="febc0686-5f16-42bd-8cf5-d77459442fa0" />
+                          </propertyInstance>
+                          <elementDefinition Id="004192ba-ad29-409a-b2b4-8ff52e267213" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="d4137378-1d88-4355-8e8d-87c61a678a3a">
+                          <propertyInstance Id="191c601c-bdfe-4ca0-a244-e22cf26d9278" name="params" value="false">
+                            <elementDefinition Id="fd3c984c-0482-430f-8383-acb5b5d24e11" />
+                          </propertyInstance>
+                          <elementDefinition Id="dece11a7-f43e-47e6-bcf9-8375b46cd50a" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="053f7dd9-4681-48da-b58d-75be1d163465" />
+                </operation>
+                <operation Id="edc9828f-2da7-4152-ade7-75951d0db2c9" name="WorkServiceClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="5bacb2ed-2c57-4e3c-ad82-a18247124c65" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                      <elementDefinition Id="9ad6f1b0-43ea-4abc-8fbb-f37db09befc5" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="9ff430ec-a8a3-4aca-8702-24dbcb6671d5" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="7ac32ac7-a84b-4be2-9983-34ca7fdbaadb" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="93577d2b-fb1e-4087-9db6-74b798b3136c">
+                          <propertyInstance Id="821aa49f-9655-4374-ac5b-ce54a6d501f5" name="ClrAttributes">
+                            <elementDefinition Id="20aefa17-16d4-43c1-a1bd-5081c5b8bc72" />
+                          </propertyInstance>
+                          <elementDefinition Id="40a2cbe5-1d62-4721-bd4f-3a62ba6e4a2b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="45eb7763-fafa-42a8-a87d-9d4bfe713c2e">
+                          <propertyInstance Id="615bf128-e800-4c80-b93b-4e886f8778d3" name="IsPartial" value="false">
+                            <elementDefinition Id="c036cde1-d8e0-436f-bf8a-bba10b48d988" />
+                          </propertyInstance>
+                          <elementDefinition Id="7661b2a7-2e6e-455b-b5bc-e7d556cb42c2" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="5bd37585-fbea-4fe3-8382-303973590763">
+                          <propertyInstance Id="c83432cb-b50a-4daf-a4ed-4bd9efe8a745" name="IsUnsafe" value="false">
+                            <elementDefinition Id="3b8ef1af-db43-40a7-a7d7-317e48289268" />
+                          </propertyInstance>
+                          <elementDefinition Id="c385ec68-14c1-443f-95fc-7cf2e03eada8" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="68dbb51e-116b-4a02-9d9b-649fce277700">
+                          <propertyInstance Id="afacb891-dd70-4227-8623-5fea5299319d" name="Inheritance" value="none">
+                            <elementDefinition Id="6b392ae2-303e-44da-8658-d9a5de3c5cc7" />
+                          </propertyInstance>
+                          <elementDefinition Id="a77a926e-69e7-456b-87ec-21cf9865ac54" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f774c365-203d-41f2-ad98-941f305331d1">
+                          <propertyInstance Id="9996180b-09cb-474b-802f-285ec93a6fe0" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="2b6d783f-d8de-4689-9ea2-19b34adbb82f" />
+                          </propertyInstance>
+                          <elementDefinition Id="e67e21d0-eecc-4623-b3b1-022667619085" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="77b252d0-635a-493d-8fb7-85602c72ab4b">
+                          <propertyInstance Id="11cae221-a3cd-478d-a853-f5982e4b34e1" name="params" value="false">
+                            <elementDefinition Id="10f97e35-683e-42ae-b4ce-b97b26158d46" />
+                          </propertyInstance>
+                          <elementDefinition Id="64189fa0-b1dc-4582-bcc1-5354f55b2297" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="b536fc90-c738-449b-9f23-a55f7fa9ff64" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="97db7fce-87d4-4949-aca9-667b6624e6f1" name="endpointConfigurationName" direction="In">
+                        <referencesInternal>
+                          <reference Id="ca4aaf4d-a54e-4f24-ab0a-e44c7bcaffff" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DendpointConfigurationName" tag="ViewCode">
+                            <elementDefinition Id="cc546b2b-933e-453c-bd31-bd47ebc08fdd" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="590dbe3c-cbca-476d-a546-ff9b56a1f76e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0ac503cb-2fa5-4ccd-88f0-de4b9b0ce028" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="503f95bb-47ea-4047-a6f4-404557cc8aa1" name="WorkServiceClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="bb0e8268-fa7b-420b-8392-1ada3acd1f6e" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)])" tag="ViewCode">
+                      <elementDefinition Id="47a4664c-f8a3-4024-a17b-b834e1afa3b6" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="d307ad6d-8b8a-49c3-aa50-3ba26a3b5edd" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="2050b673-53ce-49e6-8e49-5b01b695f0d3" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="18368891-732a-42db-9a29-e5a7bea16a82">
+                          <propertyInstance Id="5e4b9648-4b43-412a-84c9-503ffec1bc30" name="ClrAttributes">
+                            <elementDefinition Id="e0cdfd60-7135-40c1-af7b-512c0f48ba8c" />
+                          </propertyInstance>
+                          <elementDefinition Id="20419674-c2e6-42bf-8800-30ea6d365da4" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="884fc53d-8aa2-4faf-b000-7e3e91972f15">
+                          <propertyInstance Id="fef5caf6-52e6-4214-aa53-85cdeeea2916" name="IsPartial" value="false">
+                            <elementDefinition Id="6a351b91-efb2-4767-a78c-c63307924c67" />
+                          </propertyInstance>
+                          <elementDefinition Id="4346d1fe-8526-4b55-947d-31acae6a241d" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b5cb87ee-e275-49ba-8270-b18bfcc5ab9a">
+                          <propertyInstance Id="2c480b56-a855-4594-a2ad-8ddc949d0291" name="IsUnsafe" value="false">
+                            <elementDefinition Id="b275109b-8e22-4c06-a3b7-93608376a553" />
+                          </propertyInstance>
+                          <elementDefinition Id="7725b247-8762-4ccb-94a3-fd367a877259" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="78b6f2ea-42f3-413a-a3e1-70f869f2cc07">
+                          <propertyInstance Id="4f238f54-7847-4143-b967-edfc16c4b5e9" name="Inheritance" value="none">
+                            <elementDefinition Id="ec0d7c6e-c4f7-4fa2-83b1-f9eb3483326b" />
+                          </propertyInstance>
+                          <elementDefinition Id="124c0198-ce35-456e-a3bd-9521d4dce450" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ace5ab55-defe-4255-9992-ac6f7c8f69f1">
+                          <propertyInstance Id="4879d476-cf27-465f-8754-84046c954b9f" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="293bce24-d5c9-417e-af16-4074e6d4cb22" />
+                          </propertyInstance>
+                          <elementDefinition Id="5f3d1892-f383-4afe-9dc2-8e7d3acc5a4f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="35eed2b0-eedb-4e02-9f5f-a156f23484d7">
+                          <propertyInstance Id="01e50757-122d-4c36-943f-2fd4032f53e1" name="params" value="false">
+                            <elementDefinition Id="0bad39ea-b1c5-4f66-be4f-3bf1a1168c75" />
+                          </propertyInstance>
+                          <elementDefinition Id="c666ee99-30bc-475d-a47f-3af02b9bab16" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="7da6da6f-f685-4cb3-a672-3d3cc2c02ed4" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2d7d195d-2241-4440-ab4e-7b1aa5d251ef" name="endpointConfigurationName" direction="In">
+                        <referencesInternal>
+                          <reference Id="7c69f3a1-e5d6-4195-84eb-b6c70c778d65" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DendpointConfigurationName" tag="ViewCode">
+                            <elementDefinition Id="21efb578-a32f-4f51-8d54-420bf3dbd6ef" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="35c35e78-a359-45a2-aaa9-eb5a1f2a54fc" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0ac503cb-2fa5-4ccd-88f0-de4b9b0ce028" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a878c0fa-9298-47a6-aa3e-43e781636df8" name="remoteAddress" direction="In">
+                        <referencesInternal>
+                          <reference Id="7265c7e6-e5a4-48ab-a737-f221871f48f9" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)]) ParameterIdentifier%3DremoteAddress" tag="ViewCode">
+                            <elementDefinition Id="5840f508-37fb-4e73-a75c-36ae47f96171" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="d15b2144-31f5-43d6-8a26-a0d37d04fbf3" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0ac503cb-2fa5-4ccd-88f0-de4b9b0ce028" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="376be92f-aed0-4074-bfa2-068a373c8bc6" name="WorkServiceClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="b671a4cf-8393-499d-baa6-eb505510178f" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)])" tag="ViewCode">
+                      <elementDefinition Id="78b7aed0-6ce1-4ce6-afa2-42eeb974f638" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="1af3bd21-4fe1-47af-a97c-0733ef932408" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="08c7da59-dffb-4eb2-82b0-677cf3a8e6e5" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="7eed7bf4-a17c-4332-8169-cdb0cab74854">
+                          <propertyInstance Id="ffa18883-2803-4af8-a0b0-449893cd2c74" name="ClrAttributes">
+                            <elementDefinition Id="4655670a-37a8-4907-8f0e-bd8688f5180b" />
+                          </propertyInstance>
+                          <elementDefinition Id="27d9ec65-e8aa-4023-be1d-fb5c12b4cb44" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="e9983b31-e98b-46b4-9d1d-f74b0f857cbc">
+                          <propertyInstance Id="ebf4feb5-2156-4fb1-b77a-b55b9804c70d" name="IsPartial" value="false">
+                            <elementDefinition Id="a7289cce-4f68-4028-ace5-22547d9a5f45" />
+                          </propertyInstance>
+                          <elementDefinition Id="13441254-0206-48cb-b38c-7479f362ea2c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ab746998-996f-434b-9708-0baf4135b997">
+                          <propertyInstance Id="e6f72ed9-34b5-4ce3-b19a-eeebda2c08e9" name="IsUnsafe" value="false">
+                            <elementDefinition Id="d35d6073-c7c9-4dd5-a7e2-f21a4194913d" />
+                          </propertyInstance>
+                          <elementDefinition Id="7bf6db4b-5746-437b-94a2-bbb1e5db6dda" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f51e4e7d-c523-481d-a6f4-897cbe260188">
+                          <propertyInstance Id="db1af030-4022-4629-884c-cfae5debfb2b" name="Inheritance" value="none">
+                            <elementDefinition Id="427af975-e876-4be0-9f61-09a35681f599" />
+                          </propertyInstance>
+                          <elementDefinition Id="99c0aed8-fd72-4933-bdcc-38c0fa2d1465" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f38936e9-5487-4c38-bdea-f05c52fc38db">
+                          <propertyInstance Id="d0d6022a-dece-4652-9979-a0ee9b62e731" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="25d6ef61-dae9-49be-9d2d-4ada41f65895" />
+                          </propertyInstance>
+                          <elementDefinition Id="69a9da3e-6c26-45cd-a92c-8ed5a797ac36" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="80684feb-716f-40d2-ab82-63c2d3388aef">
+                          <propertyInstance Id="9590d934-b9d4-40c7-8982-73da7c8c1388" name="params" value="false">
+                            <elementDefinition Id="29f95e46-d1bc-4caf-a523-a499dc403d36" />
+                          </propertyInstance>
+                          <elementDefinition Id="28f73558-b3be-492f-be05-b426aad98316" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="e8765a44-a1cb-4f91-b5c3-7686d064c4c7" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9d480f73-d5ce-40f2-bb2c-faed9aa37910" name="endpointConfigurationName" direction="In">
+                        <referencesInternal>
+                          <reference Id="0f7ad91d-bb2d-48a1-8c21-fd509b0e1536" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)]) ParameterIdentifier%3DendpointConfigurationName" tag="ViewCode">
+                            <elementDefinition Id="066aeeec-68e4-4857-adf4-31fc13bedc06" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="6d7e33c1-6901-4ce5-baa1-678d90d7d6bb" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="0ac503cb-2fa5-4ccd-88f0-de4b9b0ce028" LastKnownName="String" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="321ecffc-3db7-49d7-9dde-d1dd148ef081" name="remoteAddress" direction="In">
+                        <referencesInternal>
+                          <reference Id="76909270-0578-4804-bde1-7ac6596b0f1a" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DString)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)]) ParameterIdentifier%3DremoteAddress" tag="ViewCode">
+                            <elementDefinition Id="bd0d6184-b522-4688-bea7-800170d98175" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="2c311ed0-551d-4164-bb14-ab951cabb2a5" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="24189d40-869f-4f38-8b4c-fe5406bbb141" LastKnownName="EndpointAddress" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="048cd17a-e117-472b-94a3-2f538d5635d1" name="WorkServiceClient" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="d5a7b0fc-eb84-4369-a388-28ac80c200e7" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel.Channels Type%3DBinding)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)])" tag="ViewCode">
+                      <elementDefinition Id="c7387a3b-ac13-47cf-98aa-d617db365c53" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="b8fb0946-4888-4542-9838-495442eccffc" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="ee44cf7e-c84c-4630-a0be-f5bbb970d7f8" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="258a33ec-61e6-4424-85cf-05c8ec252f30">
+                          <propertyInstance Id="8192b97b-3e99-415d-b3cc-8ec42feeb0e1" name="ClrAttributes">
+                            <elementDefinition Id="2dd40088-f665-4778-888e-8b54ab97d025" />
+                          </propertyInstance>
+                          <elementDefinition Id="68597774-1813-4517-8941-d9c9b5d63439" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c92698ee-f491-43fa-8bb4-d6f4eb514cd3">
+                          <propertyInstance Id="118a7e4f-4faf-46cd-b48e-e38927c7484b" name="IsPartial" value="false">
+                            <elementDefinition Id="78d9ebdf-11e2-4ecf-a419-09a8e95c1742" />
+                          </propertyInstance>
+                          <elementDefinition Id="b8f1dc17-0f8c-48b1-a198-d1816df46cf8" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="45321d8e-eafd-42b0-a449-f08ab1214d54">
+                          <propertyInstance Id="3fb4fe7b-f1cf-4570-9804-c258378b3692" name="IsUnsafe" value="false">
+                            <elementDefinition Id="863f55e1-77e8-4546-af95-98d5b43960ba" />
+                          </propertyInstance>
+                          <elementDefinition Id="63d7a995-8082-4fd8-9aa2-7c7d8a235b2a" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="1f8c425a-8e54-4e6c-b852-3fc2d4775f45">
+                          <propertyInstance Id="a556a5a3-ab5e-4705-895e-d9d9bd525482" name="Inheritance" value="none">
+                            <elementDefinition Id="818e0314-e6d4-4165-b00f-4eb932775dd5" />
+                          </propertyInstance>
+                          <elementDefinition Id="8aad0764-ac5f-4deb-b7ac-02d844ff612c" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="191bc35d-87dd-48e6-ac88-3e8a05acfc47">
+                          <propertyInstance Id="3a6ec38b-603f-4ba5-b9f1-0e566c7135eb" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="2b04e09c-86bd-4cc7-baf1-a8251571e14d" />
+                          </propertyInstance>
+                          <elementDefinition Id="a66125b6-a0ef-4f74-ac52-93287e3a1dee" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="46fe2bcf-0b4e-48b1-800e-9e1d1c4a55ba">
+                          <propertyInstance Id="01c4d509-bf94-40cb-bd3b-78ee62bd36af" name="params" value="false">
+                            <elementDefinition Id="770820e1-c333-43eb-a500-20fb5f5f6008" />
+                          </propertyInstance>
+                          <elementDefinition Id="6f171205-99ea-41b0-a4ac-84389fbc2e64" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="afcadb6e-3da1-49c4-bbaa-269c6bf2a21a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d019099a-2d14-40ad-b34f-b4d117dab726" name="binding" direction="In">
+                        <referencesInternal>
+                          <reference Id="d54d11cc-1cc8-42c5-ad84-51d04b2d8a6b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel.Channels Type%3DBinding)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)]) ParameterIdentifier%3Dbinding" tag="ViewCode">
+                            <elementDefinition Id="f824bfdb-9ac4-40a5-88a8-48e9d5391f87" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="e45638d7-4063-43a3-bcd1-df1889450fd8" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="c304e64a-6301-4486-ad23-836ea5a96d18" LastKnownName="Binding" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5894ad54-c5b6-44b6-ba86-e4b63ac7558a" name="remoteAddress" direction="In">
+                        <referencesInternal>
+                          <reference Id="36a6f623-f1f5-4c89-8c9d-b2b1f04b25c0" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3D.ctor OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel.Channels Type%3DBinding)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2FSystem.ServiceModel.dll&quot; Namespace%3DSystem.ServiceModel Type%3DEndpointAddress)]) ParameterIdentifier%3DremoteAddress" tag="ViewCode">
+                            <elementDefinition Id="af8996c5-34b9-421a-aff7-a3786432412f" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="3e731c11-5fa1-4fcd-bf0a-abdff3de7586" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="24189d40-869f-4f38-8b4c-fe5406bbb141" LastKnownName="EndpointAddress" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="58f0e00d-6c7c-45db-8381-726061825451" name="ServiceOperation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="9435d932-1211-4c06-afe3-65a7e3c1ac91" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)])" tag="ViewCode">
+                      <elementDefinition Id="2321e937-09a2-4792-8fa7-793f9196bedb" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="4580cff3-a573-40e4-ba78-63335a371a2d" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="9e352061-658a-4ac6-9460-0e7691621781" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ef02513b-0b23-4d68-94bf-cc9c30c997c2">
+                          <propertyInstance Id="a52725c9-00b8-4d53-9a75-9f75a2f0f1a4" name="ClrAttributes">
+                            <elementDefinition Id="4f0617e8-a08d-4602-8961-55c2ee7db197" />
+                          </propertyInstance>
+                          <elementDefinition Id="174c4e47-bf6f-4b3a-88c5-fcff81ac2fa7" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="42b44da5-30c4-43fd-92e1-f41808ddd690">
+                          <propertyInstance Id="93d02c5a-76e1-4467-9353-13ac1bcd2fb9" name="IsPartial" value="false">
+                            <elementDefinition Id="34c330e1-1d7a-47f5-8234-a84144a6500a" />
+                          </propertyInstance>
+                          <elementDefinition Id="45b1273e-f18c-4ba4-854e-39f06e0c1514" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="99e30cbd-cbaf-4006-af8a-eb08eafca899">
+                          <propertyInstance Id="5402cfcd-1e1f-4358-8dbd-ce9da43f9154" name="IsUnsafe" value="false">
+                            <elementDefinition Id="f61d6c3f-69ba-4b3a-8c5b-8553834cbdd0" />
+                          </propertyInstance>
+                          <elementDefinition Id="37830f90-4148-4be4-86bd-987cc1e511e2" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="08697bdd-e42f-4282-b9c6-68935520f68b">
+                          <propertyInstance Id="2ec9744d-b997-402f-a14d-1078262f8a5d" name="Inheritance" value="none">
+                            <elementDefinition Id="f12028b7-b69a-4bd3-be93-03a5ca40ba24" />
+                          </propertyInstance>
+                          <elementDefinition Id="c7f9918d-20a6-40e0-b738-e1fd45c6fd55" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="2ac14c71-2e83-4e78-9020-feb6fc0d5160">
+                          <propertyInstance Id="529eea7e-c07e-4a1e-be8f-83479d0715bd" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="01dc1534-0ad6-4949-b7f9-c699e2da3df2" />
+                          </propertyInstance>
+                          <elementDefinition Id="d53ce8d4-ab72-4aef-a4d6-b979abfb244e" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="11ca6d32-add2-493a-aa35-4b68f136ed5c">
+                          <propertyInstance Id="e96c5448-52da-426c-8aca-45c0824907b0" name="params" value="false">
+                            <elementDefinition Id="e886c077-d65c-49fb-9e8d-f2ebee72b30e" />
+                          </propertyInstance>
+                          <elementDefinition Id="f2e42ff6-1fb1-4994-9cb6-dfe957ab7096" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="ecaa80f8-713c-4e12-ab32-77bcdec7074a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="5e79e4ee-12df-4f08-a84f-cf5d9c7757a4" direction="Return">
+                        <elementDefinition Id="9bfb4724-86ae-40c0-913c-bc27643e49ff" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="14518f59-53f0-4e48-9df0-1519e527628e" name="msg" direction="In">
+                        <referencesInternal>
+                          <reference Id="0651aac7-d44f-400d-942c-c46135cc52fa" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)]) ParameterIdentifier%3Dmsg" tag="ViewCode">
+                            <elementDefinition Id="e5645cae-fdad-4600-a741-acb8dfce9dd6" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="5dce0a44-121a-47aa-ae04-b91dd55b3869" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="5a9ca930-fbd2-4e2e-9ebf-b7eaa7b6ed7a" name="BeginServiceOperation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="9dc0eac5-bcd8-41c9-8346-b85a5ddbb072" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DBeginServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])" tag="ViewCode">
+                      <elementDefinition Id="7db6f7fc-83ee-45ef-bbc8-275179402fbc" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="91aa2f0c-d049-4feb-b79c-cff9c6d9ab3c" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="1e03409b-1e0b-4283-ba03-c3208252c856" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="1cb3e17b-239e-40ca-a996-bbf0ecb0e38b">
+                          <propertyInstance Id="afd38327-2b32-45a2-825b-fc1f79018dd6" name="ClrAttributes">
+                            <elementDefinition Id="062dd7ea-021c-4e2f-bfe5-f73c420947eb" />
+                          </propertyInstance>
+                          <elementDefinition Id="79b837ef-5a59-4050-8183-8c4113868aea" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="0fa4d779-a622-4e44-90e8-1209c58eb525">
+                          <propertyInstance Id="3f88f545-6b0f-4c9c-96eb-90d1e4bc71e0" name="IsPartial" value="false">
+                            <elementDefinition Id="082ecf18-99c4-4333-be03-88e52ea05840" />
+                          </propertyInstance>
+                          <elementDefinition Id="0abfe99a-ae96-4806-bb1a-fa15c28d1fc3" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="66b5af9f-7a98-4161-b674-93bc324face6">
+                          <propertyInstance Id="414e27d1-404e-46cb-becf-cbd048ed3775" name="IsUnsafe" value="false">
+                            <elementDefinition Id="b9e1473b-4f7b-4c07-8365-975d8f640340" />
+                          </propertyInstance>
+                          <elementDefinition Id="28f66689-5669-4def-8ef7-932bf6219887" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="3661be91-67b3-440d-8d2f-5c0234604cd8">
+                          <propertyInstance Id="75f67820-e739-41ff-b577-15a249167af5" name="Inheritance" value="none">
+                            <elementDefinition Id="558c5b02-8aa4-4324-a660-99f18b46d3d5" />
+                          </propertyInstance>
+                          <elementDefinition Id="0b2aecb7-5929-4a6d-8bca-0d1ee02a3183" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="475c98a9-f558-4571-9dc9-9a7a50f8c26e">
+                          <propertyInstance Id="483407fa-efc5-4a32-81dc-ccacf675ac07" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="90a7cb88-7adb-41b8-8eb3-438c44cc0c23" />
+                          </propertyInstance>
+                          <elementDefinition Id="90ea27c2-0cca-4815-bc82-67f51a425dc9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="908268b5-c338-4a79-b8e1-f91c1083d827">
+                          <propertyInstance Id="3c29f55d-7058-4c78-a941-8307865ef498" name="params" value="false">
+                            <elementDefinition Id="0fa261cd-eb02-4eb9-a755-7893f86bf91d" />
+                          </propertyInstance>
+                          <elementDefinition Id="ba4e6f4e-2957-4fee-9dec-14ebc04d0e41" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="943dd427-5ac6-4f15-b235-247ad935b790" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2bcbdf81-9407-4956-9570-edf4a4929158" direction="Return">
+                        <elementDefinition Id="f869271a-7161-4d80-b5c9-7b4b09844c4e" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="71193446-c573-47b1-9bef-ff1c0369523e" LastKnownName="IAsyncResult" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9241311c-b1e4-4769-976f-dd57357aeadc" name="msg" direction="In">
+                        <referencesInternal>
+                          <reference Id="52fac8c7-38c3-401f-affe-5a24d6833241" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DBeginServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dmsg" tag="ViewCode">
+                            <elementDefinition Id="f00f3085-0e5c-4151-9739-b0885590940a" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="637d583d-3e88-480b-8e88-f5df269d9f29" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="2cd52478-1046-43e4-b0a2-63a4dfc2b0e1" name="callback" direction="In">
+                        <referencesInternal>
+                          <reference Id="22c480ad-d209-4971-ba18-71e16f7f641e" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DBeginServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dcallback" tag="ViewCode">
+                            <elementDefinition Id="9506644b-6d90-49c4-bbaf-f73ef99c6c2b" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="c1f690e8-ee75-420b-8408-3fb060fa5e4d" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="447ac546-5806-484d-9593-e38eb3a8ad6d" LastKnownName="AsyncCallback" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="13a25f4b-c636-4e26-a701-c260e0c4c765" name="asyncState" direction="In">
+                        <referencesInternal>
+                          <reference Id="c9f027b2-cd79-400d-a570-7a90a8ab222b" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DBeginServiceOperation OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DasyncState" tag="ViewCode">
+                            <elementDefinition Id="7b2538ad-5c62-4151-a11f-7874883d7b5c" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="a3f62418-c774-4d4d-a06a-f126873460ca" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="0c20e69a-5305-4823-98f3-9f7f868176fb" name="EndServiceOperation" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="ad83963f-c6aa-4429-afb6-92e9d7ec5f9f" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DEndServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DIAsyncResult)])" tag="ViewCode">
+                      <elementDefinition Id="4f4278ed-150d-4ef7-93e1-a4d21728f95f" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="10a55fc6-9d3a-46b0-818d-33c2f98a508f" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="56c12d80-3ddf-4142-b62f-d50615a221f1" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="722ae524-f7d3-4fa3-b985-6caa8919056b">
+                          <propertyInstance Id="78a6b294-7d78-4c46-9a1b-e6dab583459d" name="ClrAttributes">
+                            <elementDefinition Id="abbe52e1-6029-4fea-83b2-5f3adf49053f" />
+                          </propertyInstance>
+                          <elementDefinition Id="fe12bec2-b6f3-4704-bbe1-8641c9858960" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="12977f13-060a-496d-a54d-7d226a981d50">
+                          <propertyInstance Id="cfda45c0-2cd2-4b01-9ea4-e26c4e84e007" name="IsPartial" value="false">
+                            <elementDefinition Id="ece03dd4-3749-4536-805c-c3b5b1b0000b" />
+                          </propertyInstance>
+                          <elementDefinition Id="adceb4aa-9d51-4618-8945-04700e9326b6" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="5886e6d7-2969-4a37-b358-f5a7c34fdd7e">
+                          <propertyInstance Id="38758dcb-023d-4973-87a1-b8128ab54c06" name="IsUnsafe" value="false">
+                            <elementDefinition Id="7cbb4643-9aaf-4a70-a501-4784b2d504fa" />
+                          </propertyInstance>
+                          <elementDefinition Id="cec08d6d-f3bb-4024-9479-c0786b09740a" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="a52c7ba5-451e-4acc-b067-f9a9f7397d93">
+                          <propertyInstance Id="f67fef39-79c4-4243-b44b-95fc3b5b4e8d" name="Inheritance" value="none">
+                            <elementDefinition Id="e8427796-d044-4b5c-af20-2092de6cc2fa" />
+                          </propertyInstance>
+                          <elementDefinition Id="fb94990a-2357-49e5-a764-47752c7e5e8f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="85db56bc-2d85-4c0b-acd8-f0180dfdc3cf">
+                          <propertyInstance Id="6c877bdb-427e-443d-a7d8-55ede114a711" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="fa701d8a-dd19-4d51-998c-f3534a07c5af" />
+                          </propertyInstance>
+                          <elementDefinition Id="423a99ba-6c79-4cfa-8333-450e29dd80f5" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="d2284494-e7c9-4403-941a-9292e3254850">
+                          <propertyInstance Id="ff793251-8e21-404a-94db-b7b1054529f1" name="params" value="false">
+                            <elementDefinition Id="7a0b5489-e44e-4640-8558-8a326382f11a" />
+                          </propertyInstance>
+                          <elementDefinition Id="28970996-2cfd-4138-87e4-d9e8b4473055" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="fc4b9445-9894-47a4-b616-bff527fcdf71" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="86e35901-63ac-446d-ba55-629c4504f0de" direction="Return">
+                        <elementDefinition Id="e95bd935-b059-4fcb-8034-46ed8fa13198" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="4d0c0b3e-90ba-4bf9-b090-453e07eb13df" name="result" direction="In">
+                        <referencesInternal>
+                          <reference Id="d38fec9d-cfab-4626-98b3-8a23ba5dc083" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DEndServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DIAsyncResult)]) ParameterIdentifier%3Dresult" tag="ViewCode">
+                            <elementDefinition Id="e349bdd1-987b-4f4e-bd2c-9ddd27c80b90" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="f8ac73d5-ff09-4acf-95e7-6762d32dad94" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="71193446-c573-47b1-9bef-ff1c0369523e" LastKnownName="IAsyncResult" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="fa05e677-4949-4824-a29b-429188dc158d" name="OnBeginServiceOperation" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="c03cd682-56b9-45f2-82ea-7b7e091ac67c" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnBeginServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])" tag="ViewCode">
+                      <elementDefinition Id="c1374a72-1e69-4779-bb7e-3ee72261b1c4" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="f0646a83-97e6-49ab-9623-7b6c2906a85f" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="dd986580-c576-40ce-87ba-788869f7f1e8" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="eedc0204-86b3-4c8a-874c-bb231f4affa3">
+                          <propertyInstance Id="2e878d11-699b-4908-abe4-784a50ffab48" name="ClrAttributes">
+                            <elementDefinition Id="d14eaa73-71e8-4370-ac4c-337ded410d0c" />
+                          </propertyInstance>
+                          <elementDefinition Id="a885698a-1730-466c-82a2-f70dc377eb1a" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="c84ed7f3-feff-47dd-98db-a5e76060a969">
+                          <propertyInstance Id="eb9a4e8c-7092-4011-863b-4f616e083150" name="IsPartial" value="false">
+                            <elementDefinition Id="05270c83-8dee-4048-92e4-2763c72dc17d" />
+                          </propertyInstance>
+                          <elementDefinition Id="1c7a10b0-2eea-4371-932b-2aaa03b422a9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="5ec79644-a931-4f7c-a5fc-8b2938971163">
+                          <propertyInstance Id="7d5bffdc-a8cd-415f-89c6-9423d0c196c6" name="IsUnsafe" value="false">
+                            <elementDefinition Id="3bf46319-72b6-42fb-a147-024b171c1715" />
+                          </propertyInstance>
+                          <elementDefinition Id="e3e750a9-e798-4819-9a8f-3ecedee3d570" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="4eb8b709-f44d-42a6-8c7a-16089d8a6e4c">
+                          <propertyInstance Id="6bcc2038-2785-44ec-ad40-ffe3e18f2fd2" name="Inheritance" value="none">
+                            <elementDefinition Id="0b2ae38e-8710-490a-950c-919e1d75a099" />
+                          </propertyInstance>
+                          <elementDefinition Id="1f307259-e675-4222-b5c2-0bd95c7ba402" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="623359ac-a04c-402d-8909-8c2e609136f6">
+                          <propertyInstance Id="d988dd4a-9c1d-425b-9788-e15f662814d1" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="8f22ba48-c4e2-4e8c-b69e-8ea8017a40ac" />
+                          </propertyInstance>
+                          <elementDefinition Id="290418c2-eaa2-4599-aefd-ec5bfa0f35aa" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b4a49f08-74e8-4655-8951-d5433766bfc8">
+                          <propertyInstance Id="82879baa-51a6-4b76-b511-a9c735cae100" name="params" value="false">
+                            <elementDefinition Id="f52afad7-0ffc-4993-8340-87789a570cb3" />
+                          </propertyInstance>
+                          <elementDefinition Id="841e5af6-c6c9-4782-a436-b1a0f1654591" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="122221b5-aa12-47ba-8e2e-b5736443935f" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e8232995-1796-44ad-b79c-a3a72cd0cb04" direction="Return">
+                        <elementDefinition Id="e474fa6d-380b-4176-8190-55587a12d832" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="71193446-c573-47b1-9bef-ff1c0369523e" LastKnownName="IAsyncResult" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="c49c32a5-dac4-40fb-b238-13798506d238" name="inValues" direction="In" isOrdered="true">
+                        <referencesInternal>
+                          <reference Id="2cabbaed-f923-4020-b9f0-1500553d0277" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnBeginServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DinValues" tag="ViewCode">
+                            <elementDefinition Id="2f7d8a83-08b0-48dc-9933-1e2587a8dc66" />
+                          </reference>
+                        </referencesInternal>
+                        <lowerValueInternal>
+                          <literalString Id="16e646c7-d9e2-4a3b-9fd9-a530826a2d18" name="Lower" value="*">
+                            <elementDefinition Id="ffd12f59-1c5d-4b5d-af5f-046750c0f97e" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="55f6316c-ff99-4928-980e-dee7f149db8b" name="Upper" value="*">
+                            <elementDefinition Id="584cd16b-bfa6-4da2-89d6-51b902bcdfcf" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="18237ea1-ddde-418f-ae31-1a6a158cfbee" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b81a0318-0d3a-4b9e-a06f-c0345c31e270" name="callback" direction="In">
+                        <referencesInternal>
+                          <reference Id="3451f407-260f-46d5-ba37-d43c82d8f910" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnBeginServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dcallback" tag="ViewCode">
+                            <elementDefinition Id="41d35c0c-995c-43b4-b16b-0c23db5c731c" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="44450f35-d5e4-433f-86b7-e2ba2495a172" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="447ac546-5806-484d-9593-e38eb3a8ad6d" LastKnownName="AsyncCallback" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8d2f3e17-d467-421d-92e1-a63feaa4092c" name="asyncState" direction="In">
+                        <referencesInternal>
+                          <reference Id="1ba86568-2062-4c44-bba8-d358598292bc" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnBeginServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3D(Name%3DObject ArrayRank%3D1 ParentType%3DObject))%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DAsyncCallback)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DasyncState" tag="ViewCode">
+                            <elementDefinition Id="67f595b7-7f77-42e7-8a0c-e78097b2ccb1" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="990af5b2-3f15-46af-bce7-16eb244f7014" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="e0351f3c-2cbf-4091-bb48-6c1336471ec4" name="OnEndServiceOperation" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="3f91f19f-790a-42f0-b6cf-aaf6f94b63d6" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnEndServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DIAsyncResult)])" tag="ViewCode">
+                      <elementDefinition Id="488e9151-0d4d-48b5-b5fc-0628b6064e27" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="f5d26de2-1449-436c-a7af-278bb5c0b93d" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="ea957f43-1178-4ca9-bf2b-4b4c8d9096f4" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="4295f3c2-f6f1-4bf3-a44c-48a7b29df5dc">
+                          <propertyInstance Id="3f96c1db-afdd-451d-9ffa-e2cd9b1c1a74" name="ClrAttributes">
+                            <elementDefinition Id="bba93eca-6f37-438f-aa16-ebf12431b2f1" />
+                          </propertyInstance>
+                          <elementDefinition Id="608c9dc5-4b8b-43c9-aad1-0b6e31778eb9" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="d3db62ae-146f-4c7f-8c09-63bdc3cf5c94">
+                          <propertyInstance Id="5adaa74d-12b3-4b56-b61d-f8dee8b44b54" name="IsPartial" value="false">
+                            <elementDefinition Id="d5a78ef2-8a26-4cb3-b943-ac75e4854c04" />
+                          </propertyInstance>
+                          <elementDefinition Id="7851de33-ee1a-4b50-a61f-d5f67b95ed2b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="2ab90bbc-1105-4848-af91-492d47b47087">
+                          <propertyInstance Id="07ac4844-0706-43ae-8e6e-73928939ea7a" name="IsUnsafe" value="false">
+                            <elementDefinition Id="c5fcc92d-2581-4aa2-bd8e-aa5430217ec8" />
+                          </propertyInstance>
+                          <elementDefinition Id="292bcca4-14da-432d-abad-2193b9d99355" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="e4ea7f14-fb81-47b6-b301-e73ef313ed1f">
+                          <propertyInstance Id="5809576b-c9f7-4370-a47d-852019034882" name="Inheritance" value="none">
+                            <elementDefinition Id="8bd03e0e-84af-47b6-aabb-7f56718ff2ee" />
+                          </propertyInstance>
+                          <elementDefinition Id="96a637a1-8c07-4242-877c-922e3782fe08" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b582ec0e-1de4-43cc-a0f4-f53f8249ab9e">
+                          <propertyInstance Id="dcbe0b30-b4dc-4a63-ae87-142d4d463471" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="3bb72541-b028-4865-b2fc-8e7b4249618d" />
+                          </propertyInstance>
+                          <elementDefinition Id="29f606f1-e60f-4404-a155-fe419ed85e09" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ca4975cf-6aec-4422-a6a9-e6d31c2afda9">
+                          <propertyInstance Id="3e083554-012c-41a7-9ae8-e805e923464f" name="params" value="false">
+                            <elementDefinition Id="11166367-e67f-4d2e-9d9e-e2eb88b7fbc6" />
+                          </propertyInstance>
+                          <elementDefinition Id="ae2dd1dc-79a7-4cc2-b131-ff166c74d481" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="51e44148-c606-44a2-a580-f85dde7bd65a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e18cb119-9c34-45db-8986-a24e87731f94" direction="Return" isOrdered="true">
+                        <lowerValueInternal>
+                          <literalString Id="86a78384-8d7b-4db9-b00a-1197ef8f68f0" name="Lower" value="*">
+                            <elementDefinition Id="466b269f-fe0f-49eb-863e-63ecbe3b0b11" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="74ab2f19-eb8e-4f75-9a09-fb983eeb3d2c" name="Upper" value="*">
+                            <elementDefinition Id="e5f52d11-980e-469e-a790-d167fa03c0a4" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="dddd57c9-e091-46e9-b6bc-19b58469b834" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="8176918f-ab11-41f3-b22e-8e33b2456fab" name="result" direction="In">
+                        <referencesInternal>
+                          <reference Id="620783c8-0229-429e-8ca2-00e28b446dd4" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnEndServiceOperation OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DIAsyncResult)]) ParameterIdentifier%3Dresult" tag="ViewCode">
+                            <elementDefinition Id="c498ede8-65a3-403f-a49a-991bae8c1163" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="a6569512-af5e-4630-a7a3-92dceae052b0" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="71193446-c573-47b1-9bef-ff1c0369523e" LastKnownName="IAsyncResult" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="21202a98-4fb4-4ba4-a82f-03701456f09e" name="OnServiceOperationCompleted" visibility="Private" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="561259a6-5763-495f-9195-58d70f573345" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnServiceOperationCompleted OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])" tag="ViewCode">
+                      <elementDefinition Id="3558b516-a6e8-454a-9b8f-dccbf65f9e5c" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="f56da804-64ac-46f3-a1e5-9e6c2694c49e" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="804d8412-89ce-44c3-bdda-38911b0efa37" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="bfb871b3-a06a-4a22-a062-dd0b9a86ab48">
+                          <propertyInstance Id="5dd956a7-1a13-4351-a604-096929ad8bea" name="ClrAttributes">
+                            <elementDefinition Id="ddbf729a-b599-4eae-a215-acd7fe7e597a" />
+                          </propertyInstance>
+                          <elementDefinition Id="28a4ff0b-253c-4128-99fc-35eefc7634d7" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="68aee491-1980-4e03-ac54-25414a709cb3">
+                          <propertyInstance Id="46acf839-851f-4cb5-b567-e952e4b8a74d" name="IsPartial" value="false">
+                            <elementDefinition Id="998c3106-aaeb-4ee2-af33-fdcc814f3cc3" />
+                          </propertyInstance>
+                          <elementDefinition Id="5de10a9f-464e-41fe-bb4b-edf0a7367bbe" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="5ce85397-dd79-46fd-8cf0-829fd0bd3178">
+                          <propertyInstance Id="fc4c4936-6005-4ed8-bb1b-ad7b896bc6e1" name="IsUnsafe" value="false">
+                            <elementDefinition Id="3eea548b-c13d-44a6-b939-da367b8e878d" />
+                          </propertyInstance>
+                          <elementDefinition Id="d03b8c17-9157-43c6-8daf-6e1fbe22c4ee" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b32f0b13-1d8d-419a-8376-3c66462532bd">
+                          <propertyInstance Id="218d3ccc-8616-4da9-ad12-f03e254a65a4" name="Inheritance" value="none">
+                            <elementDefinition Id="d806cf10-a628-4ce1-bbac-a17b9b8f798f" />
+                          </propertyInstance>
+                          <elementDefinition Id="a445d6a6-0d48-4967-9688-8b85b99b3d8b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="60f536c1-ec2c-4d66-9b9e-58e141b4be08">
+                          <propertyInstance Id="8c91d478-2517-4936-ac5d-ad2e607fa5f7" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="a80f41a9-c903-435a-acfa-bbe59c3f0988" />
+                          </propertyInstance>
+                          <elementDefinition Id="f6feff21-d22b-4317-8819-f25278357fec" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="a3bef9ae-aff7-408e-ad28-57c4d635a74e">
+                          <propertyInstance Id="9ce7f7f5-c2b0-4a82-a2b7-ddd72fb914ea" name="params" value="false">
+                            <elementDefinition Id="9e98a2bd-25c2-4f2e-82d3-dcf304af44d8" />
+                          </propertyInstance>
+                          <elementDefinition Id="93939f73-0d53-48e2-99d7-bbeede02749b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="397b6484-5160-4100-b04b-a7442beb385a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="84eca7d7-6ba1-4a4a-b534-e53352c76bb9" name="state" direction="In">
+                        <referencesInternal>
+                          <reference Id="4b21b47f-9449-4114-bb90-2f10deefa814" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DOnServiceOperationCompleted OverloadingParameters%3D[(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dstate" tag="ViewCode">
+                            <elementDefinition Id="120b42e9-9207-4269-8ec2-4ee189e74543" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="7c66fa7e-4001-46d6-9c0a-e0c044dc86f7" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="76f885e6-7269-4126-ae4d-1976e13d4488" name="ServiceOperationAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="2d214da9-82b3-4712-afda-40dd69d91826" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperationAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)])" tag="ViewCode">
+                      <elementDefinition Id="cee86de0-9b93-4f34-94c5-da514dcb0c2b" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="27dcf115-49ee-4b60-9e38-359134d03d80" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="c12594bb-877d-417f-a15f-c0b513cdb2b4" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="813a2368-738b-4c5c-9a71-e955f71d4331">
+                          <propertyInstance Id="c81938c0-a311-4046-80cb-f58c04ac25ea" name="ClrAttributes">
+                            <elementDefinition Id="8300e8fc-159f-4d99-99ce-5435ec480886" />
+                          </propertyInstance>
+                          <elementDefinition Id="7ae60a80-7ee0-4703-8b05-247d88d62f23" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="9be4e092-a16a-41ac-8215-f105ee13264f">
+                          <propertyInstance Id="2abb6c01-b9df-4d3d-aa04-368b5e3e7ae4" name="IsPartial" value="false">
+                            <elementDefinition Id="70849f02-1381-4bdc-af05-ebe0743505b1" />
+                          </propertyInstance>
+                          <elementDefinition Id="e92ac78f-104f-41b1-905c-ee6e09009833" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="cbaec680-2c2e-48d2-8879-0a9686943e81">
+                          <propertyInstance Id="b1afcf3c-2eee-4ae2-ab22-5d44bcc9d5f2" name="IsUnsafe" value="false">
+                            <elementDefinition Id="2a4d2f66-0a26-47ac-a49c-eea2ec92d1da" />
+                          </propertyInstance>
+                          <elementDefinition Id="46e36d7c-b843-4b36-a191-b714fd202884" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="d77c774d-bebf-4759-80ad-c4561b4c0242">
+                          <propertyInstance Id="b64a639e-e316-46be-8430-d17b777469e7" name="Inheritance" value="none">
+                            <elementDefinition Id="ab313a43-5d52-4bf7-9cfb-7f6e0c9d03a6" />
+                          </propertyInstance>
+                          <elementDefinition Id="8d4980c1-306c-4b32-bb44-2cfea9085a70" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ee8d5ade-cd5f-4595-8c64-93ec790b4df6">
+                          <propertyInstance Id="1d7f74fe-5782-487b-adc8-ba9810067197" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="4995bd93-2a0f-4d60-8137-226a62ee5595" />
+                          </propertyInstance>
+                          <elementDefinition Id="c04ff096-5a35-429c-81ed-0db994e21b3e" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="84f56d08-2614-458b-a849-ccbdb9549807">
+                          <propertyInstance Id="f4ea3267-ec63-4659-a995-fd768aa9eb3b" name="params" value="false">
+                            <elementDefinition Id="f8496804-affc-4a21-b4b6-ec3d39e28596" />
+                          </propertyInstance>
+                          <elementDefinition Id="28bb6a9d-759b-448c-9557-7b91b3a0891f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="cd6e4f6d-78b8-4711-bffc-a22958ab8a62" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="d3025590-b3bc-48c3-a7af-5752dbee400e" name="msg" direction="In">
+                        <referencesInternal>
+                          <reference Id="1494c49c-9f61-492c-a91a-adf48615a7b6" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperationAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)]) ParameterIdentifier%3Dmsg" tag="ViewCode">
+                            <elementDefinition Id="7d9339fd-90bb-4501-b174-f64e8480f157" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="6ba97e2a-98d4-4fcb-9525-bb9caba092ca" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="a99bf5a3-3404-4b10-b42a-d1d1c8fecb4f" name="ServiceOperationAsync" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <referencesInternal>
+                    <reference Id="6cc22433-7d08-409d-bbb3-d2364cf53a59" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperationAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)])" tag="ViewCode">
+                      <elementDefinition Id="2e3ccafb-665c-4257-8088-4e770d16aaa1" />
+                    </reference>
+                  </referencesInternal>
+                  <appliedStereotypesInternal>
+                    <stereotypeInstance Id="83c25a7e-3faa-4a73-a096-ef3c193aeb95" name="method" profile="CSharpProfile">
+                      <elementDefinition Id="6419cff5-97ec-4a13-b5cd-bf2df41b7bb0" />
+                      <propertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="f4cf35f0-524b-47d3-857b-421ebc86ad31">
+                          <propertyInstance Id="4ca96ff5-1c5e-4573-82c5-eab901f33e39" name="ClrAttributes">
+                            <elementDefinition Id="c9f380f7-3d01-45be-9189-c52a5839ccbb" />
+                          </propertyInstance>
+                          <elementDefinition Id="529d5cc1-3e1c-453e-87e9-db05f76c367f" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="68b01036-a370-4d08-8cf5-b73f76c0944d">
+                          <propertyInstance Id="27f69129-8fe6-4f38-a041-2355e7798c06" name="IsPartial" value="false">
+                            <elementDefinition Id="4faaa92e-9951-43eb-bf43-c7841e651e6d" />
+                          </propertyInstance>
+                          <elementDefinition Id="b13e0932-c781-4bfc-88d3-9e726f14e412" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="92d774ef-f129-4310-9764-c7bc8c8f8c04">
+                          <propertyInstance Id="9eddd144-28ff-4be2-9604-14b380569078" name="IsUnsafe" value="false">
+                            <elementDefinition Id="9e4035c8-8a14-4b21-a56f-4628de89a805" />
+                          </propertyInstance>
+                          <elementDefinition Id="004bb255-8f7c-4372-8148-12e1b4048592" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="e49af0ee-de56-4b9a-a301-1f8860a165ed">
+                          <propertyInstance Id="1e4dac23-518b-4af5-89fe-943bf34519bd" name="Inheritance" value="none">
+                            <elementDefinition Id="2fa2f49a-dd7e-4b10-b4de-7df8066c5780" />
+                          </propertyInstance>
+                          <elementDefinition Id="d77b8e1e-6c57-4e66-a7ff-6397a122b1e7" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="ce397549-730a-4a4e-9181-01f3b831a672">
+                          <propertyInstance Id="de088487-c630-486d-8664-5ebcd9af713f" name="PackageVisibility" value="internal">
+                            <elementDefinition Id="fd4074ac-6aa9-48d8-b937-2f990d81fd49" />
+                          </propertyInstance>
+                          <elementDefinition Id="ff86e6c8-d699-4317-9405-868de757430b" />
+                        </stereotypeInstanceHasPropertyInstances>
+                        <stereotypeInstanceHasPropertyInstances Id="b0116c85-c4a5-4a1a-b1d3-c9e796bc301f">
+                          <propertyInstance Id="c73406e1-dfa0-470a-8164-a5d319ae7ca0" name="params" value="false">
+                            <elementDefinition Id="a1693b6b-604e-455a-9b6c-97735d404027" />
+                          </propertyInstance>
+                          <elementDefinition Id="87ed6f1f-6864-45df-875d-712eb9f63a5d" />
+                        </stereotypeInstanceHasPropertyInstances>
+                      </propertyInstances>
+                    </stereotypeInstance>
+                  </appliedStereotypesInternal>
+                  <elementDefinition Id="2e2c125e-4e99-4b52-9b23-35e52c85e7cc" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="e929db98-ae18-49a4-9603-39072f03d171" name="msg" direction="In">
+                        <referencesInternal>
+                          <reference Id="bd2a8a8b-6415-41a0-bc78-3ab4ff6bb279" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperationAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3Dmsg" tag="ViewCode">
+                            <elementDefinition Id="f099349c-99e6-4aca-9fca-96136b0e32ad" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="b3c4ac20-812c-4e02-b8d8-fd44b61ce6ca" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" LastKnownName="Message" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="bee752e3-4635-4d7f-8eb8-0f58a4d20068" name="userState" direction="In">
+                        <referencesInternal>
+                          <reference Id="6724a15d-7930-4930-b50b-12b49bdb01e1" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DWorkServiceClient Member%3D(Name%3DServiceOperationAsync OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DMessage)%2C(Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files (x86)%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.5.1%2Fmscorlib.dll&quot; Namespace%3DSystem Type%3DObject)]) ParameterIdentifier%3DuserState" tag="ViewCode">
+                            <elementDefinition Id="d48379c7-4d29-4822-b15f-b45bf6263216" />
+                          </reference>
+                        </referencesInternal>
+                        <elementDefinition Id="fe30ef3d-f38e-47fe-be73-09c2e13ff6ad" />
+                        <type_NamedElement>
+                          <referencedTypeMoniker Id="a595c827-fb82-40a1-9e2f-f432381d6e58" LastKnownName="Object" />
+                        </type_NamedElement>
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="4e93ca2d-1d8f-49cf-ad54-ee13f85cf355" name="Operations" isAbstract="false" isLeaf="false">
+              <referencesInternal>
+                <reference Id="1541100c-27f9-4ed2-8a7d-f794ece0dddf" handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations" tag="ViewCode">
+                  <elementDefinition Id="6ed8bda1-79f2-4d0d-93a8-43467883264c" />
+                </reference>
+              </referencesInternal>
+              <appliedStereotypesInternal>
+                <stereotypeInstance Id="76baab1c-73b3-4845-b106-d95a5db6c132" name="enum" profile="CSharpProfile">
+                  <elementDefinition Id="2cfd2735-f264-4fb6-a90f-e12860388d39" />
+                  <propertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="250c5c4e-9a05-4b6f-895e-f7ef78eb1049">
+                      <propertyInstance Id="9073f882-0867-4886-94ef-49d1088d01eb" name="ClrAttributes">
+                        <elementDefinition Id="5bfae403-506f-4035-bb17-bccbf23ebf2b" />
+                      </propertyInstance>
+                      <elementDefinition Id="406d9a0c-df84-4b47-bbcf-d185ad52c65b" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="3131d0c9-8f84-4d9c-8451-d74243060a4d">
+                      <propertyInstance Id="957adf21-df44-4483-8cff-acb42f8e4a87" name="BaseType" value="int">
+                        <elementDefinition Id="3b5b8ed6-8556-431e-bb27-a1c2edc50afa" />
+                      </propertyInstance>
+                      <elementDefinition Id="44d63ff8-7115-4551-b1be-b4e3de1b931a" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="bef2390a-bb81-4138-809a-b1855f4e19b9">
+                      <propertyInstance Id="fca49412-f25f-40a1-a72e-7d7da4ebf395" name="PackageVisibility" value="internal">
+                        <elementDefinition Id="fd22d7af-95b2-4114-a32d-8848f3d49b65" />
+                      </propertyInstance>
+                      <elementDefinition Id="69461e96-a1be-4332-b70f-e015386fb618" />
+                    </stereotypeInstanceHasPropertyInstances>
+                  </propertyInstances>
+                </stereotypeInstance>
+              </appliedStereotypesInternal>
+              <elementDefinition Id="4b1da78a-ffdf-4358-bc26-482d378b82c4" />
+              <ownedLiterals>
+                <enumerationLiteral Id="5b352533-c276-489f-a4b1-d68dfe81bdc7" name="Authenticate">
+                  <referencesInternal>
+                    <reference Id="95404539-bed0-4a3d-be1a-aee11e431b7e" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations Member%3DAuthenticate" tag="ViewCode">
+                      <elementDefinition Id="ed7c2595-dab2-4d97-8b8c-b45dd083793b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="35a11fc0-f31d-418d-b538-f3ec98085d0d" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="ec398069-f744-447b-95f7-c9c78664e4f3" name="Decode">
+                  <referencesInternal>
+                    <reference Id="021cdd13-352a-4e30-8a5e-63e4d28a9d48" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations Member%3DDecode" tag="ViewCode">
+                      <elementDefinition Id="7c522752-4590-46f8-8a3f-6f271ec146b7" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="2a1ae2f3-e53f-47ad-88ad-77f57aa2b655" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="0e8b2efa-5c74-47b6-90df-3882c2abf6bc" name="Finish">
+                  <referencesInternal>
+                    <reference Id="3c80cffa-9225-49e5-a732-18bad9181839" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations Member%3DFinish" tag="ViewCode">
+                      <elementDefinition Id="24d38f60-a972-4578-835a-ca1fa61b2abd" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="3e55fbca-b690-4202-bd0e-7a08767789fe" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="976d473c-5ed1-44ec-95bd-47a27b459e4e" name="GetCompleted">
+                  <referencesInternal>
+                    <reference Id="b9bf788b-4e61-4a25-8671-efa213e6f898" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations Member%3DGetCompleted" tag="ViewCode">
+                      <elementDefinition Id="8424d7b2-b1c4-4886-9670-7d83029bbbe1" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="42346336-04ab-4fd9-8190-5d7567434167" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="c01bb0e6-1dcb-47ea-a792-702333cfbea2" name="GetDecrypted">
+                  <referencesInternal>
+                    <reference Id="d2da0345-81a5-4d5c-b675-c4386a129d24" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DOperations Member%3DGetDecrypted" tag="ViewCode">
+                      <elementDefinition Id="54d3e564-1a54-4cf5-a63c-7813777f9953" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="1617cc79-3f5e-4061-9e2c-af915f493aca" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="de50f01f-8554-4e7d-ab7b-764c0a3506c9" name="Status" isAbstract="false" isLeaf="false">
+              <referencesInternal>
+                <reference Id="ea9963f6-d7f5-4d7a-935e-2fb593aecc18" handle="viewcode://./CodeSchema_Enum?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DStatus" tag="ViewCode">
+                  <elementDefinition Id="9ed4ca08-4ea2-48a1-bd34-d92b88931cc3" />
+                </reference>
+              </referencesInternal>
+              <appliedStereotypesInternal>
+                <stereotypeInstance Id="b4eb3212-34a3-4da6-b1ff-b67b01b66b65" name="enum" profile="CSharpProfile">
+                  <elementDefinition Id="a2c1dc63-cc31-4d7f-a325-869a298f4720" />
+                  <propertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="b0cd8835-4aef-4808-82e9-b77382738861">
+                      <propertyInstance Id="7eb0b890-ce93-4ae1-9ab7-5944eaac26d1" name="ClrAttributes">
+                        <elementDefinition Id="837d215b-6ae7-44ff-84d2-6fc76b79ebaa" />
+                      </propertyInstance>
+                      <elementDefinition Id="1caa8b5c-0efc-4c08-9c03-bf0a2aa8051e" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="39c8e04a-bd69-433a-9d2e-9be409a06702">
+                      <propertyInstance Id="8e7ad9c8-de0b-49fc-9bbe-2c3fdee8bef4" name="BaseType" value="int">
+                        <elementDefinition Id="1765d33b-590d-4115-8abf-74505bc3c545" />
+                      </propertyInstance>
+                      <elementDefinition Id="c5c2abf1-bc2e-48b2-8c01-678b2e874b6d" />
+                    </stereotypeInstanceHasPropertyInstances>
+                    <stereotypeInstanceHasPropertyInstances Id="3234588d-d693-4f44-b713-a5e7d57f362b">
+                      <propertyInstance Id="d8b47e83-683a-4819-a902-e5dd141f58e5" name="PackageVisibility" value="internal">
+                        <elementDefinition Id="a84152d2-df48-4a7a-8d76-0b94fbb25d19" />
+                      </propertyInstance>
+                      <elementDefinition Id="0debecf5-0661-44c7-a582-67f2c54809db" />
+                    </stereotypeInstanceHasPropertyInstances>
+                  </propertyInstances>
+                </stereotypeInstance>
+              </appliedStereotypesInternal>
+              <elementDefinition Id="8be24ceb-bc24-4a68-a409-109be6bdcd92" />
+              <ownedLiterals>
+                <enumerationLiteral Id="1f09cdf0-57d3-4885-9ff1-0eb968fade98" name="Sent">
+                  <referencesInternal>
+                    <reference Id="eb389380-2e20-4265-ba00-bf7109e11b7b" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DStatus Member%3DSent" tag="ViewCode">
+                      <elementDefinition Id="a44a2c83-d19b-4e91-963d-c40c4e596b46" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="f687cde1-060c-497b-a0f0-4674d9759a70" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="e7c6acc8-5e4e-4000-9fa9-e33fa7131a11" name="Suceeded">
+                  <referencesInternal>
+                    <reference Id="46065a23-a99c-4cb0-b2bb-2667c16b6fe5" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DStatus Member%3DSuceeded" tag="ViewCode">
+                      <elementDefinition Id="372792a9-6d9a-42e6-a1fb-7865dc58741b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="172ed607-1005-4d2d-8ba9-ce4ce502a75d" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="531b2f4f-d11b-4664-85d0-629c6fec8e31" name="Failed">
+                  <referencesInternal>
+                    <reference Id="b2a7e766-2476-4675-9e07-cd70f89daf98" handle="viewcode://./CodeSchema_Field?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FAntoine-Ali%2FSource%2FRepos%2FGenerator%2FGeneratorClient%2Fbin%2FDebug%2FGeneratorClient.exe Namespace%3DGeneratorClient.GeneratorServiceContracts Type%3DStatus Member%3DFailed" tag="ViewCode">
+                      <elementDefinition Id="c12a69fb-c94d-4348-98e3-db82f1900831" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="8c418525-81cf-4a24-99c7-1300329c1f23" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <packageHasNamedElement>
+      <referencedType Id="de8b218b-f161-4ca2-988b-5549ce0bc88a" name="BeginOperationDelegate" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::ServiceModel::BeginOperationDelegate">
+        <elementDefinition Id="c5617f1d-c5c8-4a0b-8247-2dd183a9560c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f46954be-c223-4721-89a7-d636897e9509" name="EndOperationDelegate" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::ServiceModel::EndOperationDelegate">
+        <elementDefinition Id="529cad85-d4e9-42ab-b60c-a1640d34e279" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3a94772b-a496-408c-a8f3-afc1f4444d0e" name="SendOrPostCallback" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::Threading::SendOrPostCallback">
+        <elementDefinition Id="3779d57f-885d-47f4-a139-673fe6eae0cf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b3523d98-37a7-4134-a8a7-56ee43d39def" name="EventHandler&lt;ServiceOperationCompletedEventArgs‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::EventHandler&lt;ServiceOperationCompletedEventArgs‎&gt;">
+        <elementDefinition Id="b260c41d-3e52-4e3e-a63e-58b6f7ad1ba1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="24189d40-869f-4f38-8b4c-fe5406bbb141" name="EndpointAddress" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::ServiceModel::EndpointAddress">
+        <elementDefinition Id="e9d4051e-7b4f-4c03-bc85-20392cb7ffe1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c304e64a-6301-4486-ad23-836ea5a96d18" name="Binding" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::ServiceModel::Channels::Binding">
+        <elementDefinition Id="6738a2cf-a775-4456-a3d9-e2364d34d505" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="79e89e4e-db3c-41a3-a8c3-706aeffda74b" name="Message" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::GeneratorClient::GeneratorServiceContracts::Message">
+        <elementDefinition Id="179d9c5a-6fe4-481e-bc02-e79133f5559e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="71193446-c573-47b1-9bef-ff1c0369523e" name="IAsyncResult" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::IAsyncResult">
+        <elementDefinition Id="aa1ece08-3318-4c83-b429-605e1a2ce58c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="447ac546-5806-484d-9593-e38eb3a8ad6d" name="AsyncCallback" isAbstract="false" isLeaf="false" cachedFullName="Modelisation::System::AsyncCallback">
+        <elementDefinition Id="58995c54-3d1a-4cf8-94a6-6545b2382548" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="5e8065e1-10fe-42e1-b865-c89e078fe2c8" name="Modelisation">
     <elementDefinition Id="8ce6d6dc-0f27-4cc8-a420-5a513790b5c9" />
+    <profileInstances>
+      <packageHasProfileInstances Id="32e23cf5-dde8-4496-a55e-17ba8c99952c">
+        <profileInstance Id="b931f859-a603-403b-9ed5-67b5ccfabac0" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="28d64c89-7c54-4ba5-80ed-3ef902b2f873">
+        <profileInstance Id="eb564457-d360-411c-b54b-91c860aa9814" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="92e88d23-fb52-492e-9073-ebaf546d5bf4">
+        <profileInstance Id="1380c5b3-2dc9-4fcc-bc64-f47235e0c6b2" name="CSharpProfile">
+          <elementDefinition Id="bea9ba9f-8b50-4757-9a46-d54afb4cf13a" />
+        </profileInstance>
+        <elementDefinition Id="25cdbb93-4a5d-4cac-8df5-b979ee80c34d" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

@@ -9,7 +9,7 @@ namespace GeneratorClient
     public partial class MainWindow : Window
     {
         public String userToken;
-        public String applicationToken;
+        public readonly String applicationToken = Guid.NewGuid().ToString();
         public MainWindow()
         {
             InitializeComponent();

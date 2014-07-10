@@ -531,6 +531,20 @@
               LastKnownName="IWorkService"
               LastKnownLocation="Package8_1423.uml" />
           </interfaceRealization>
+          <dependency
+            Id="6688fd9d-f466-419b-b2ea-993d513d13e6">
+            <enumerationMoniker
+              Id="4b1da78a-ffdf-4358-bc26-482d378b82c4"
+              LastKnownName="Operations"
+              LastKnownLocation="Package8_1423.uml" />
+          </dependency>
+          <dependency
+            Id="a2d6b57f-8e3d-4e8d-bdbb-f7c148c36908">
+            <enumerationMoniker
+              Id="8be24ceb-bc24-4a68-a409-109be6bdcd92"
+              LastKnownName="Status"
+              LastKnownLocation="Package8_1423.uml" />
+          </dependency>
         </suppliersInternal>
         <generalsInternal>
           <generalization
